@@ -2,6 +2,7 @@
 <html lang="{{ site.lang | default: 'en-US' }}">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png"  href="../assets/img/spotlight_black.png">
   <title>{{ page.title | escape }} - {{ site.title | escape }}</title>
   <meta name="description" content="{{ page.description | default: site.description | escape }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,14 +18,26 @@
     <h1>{{ site.title }}</h1>
     <p>{{ site.description }}</p>
   </div>
+  <div class="hero-subtext">
+    <p>{{ site.team }}</p>
+    <p>{{ site.names }}</p>
+  </div>
 </header>
+
 
 
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="navbar-inner">
-      <div class="navbar-title">
+      <!-- Logo Section -->
+    <div class="navbar-logo">
+      <a href="{{ '/' | relative_url }}">
+        <img src="{{ '../assets/img/spotlight_white.png' | relative_url }}" alt="Logo" class="logo-img">
+      </a>
+    </div>
+    <!-- Title Section -->
+    <div class="navbar-title">
         <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
       </div>
       <div class="navbar-toggle">
