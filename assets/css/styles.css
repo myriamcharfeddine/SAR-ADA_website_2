@@ -54,9 +54,16 @@
 
 /* Subitle = description */
 .hero-content p {
-  font-size: 1.2em; /* Adjust description font size */
+  font-size: 1.8em; /* Adjust description font size */
   margin-top: 10px;
   color: white; /* Ensure subtitle is white */
+}
+
+/* Names and Team (Hero Subtext) */
+.hero-subtext p {
+  font-size: 1em; /* Smaller font size than description */
+  margin: 5px 0; /* Add slight spacing between lines */
+  color: white; /* Ensure text is white */
 }
 
 /* Navbar Logo */
