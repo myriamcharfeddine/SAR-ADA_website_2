@@ -1,9 +1,9 @@
 theme: jekyll-theme-minimal
-title: ADA Template Website
-description: A template website for ADA
-show_downloads: True
-navigation:
-  - title: Home
-    url: /
-  - title: Example
-    url: example
+title: "Left in the Shadow: Women's Fight for their Share of the Spotlight"
+description: "A data story about making a woman-inclusive and successful movie."
+show_downloads: true
+
+kramdown:
+  auto_ids: true
+  auto_id_prefix: ''
+  toc_levels: 1..3

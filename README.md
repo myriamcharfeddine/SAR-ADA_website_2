@@ -1,9 +1,35 @@
-# ADA Template Website
+---
+layout: default
+title: "Home"
+---
+
+# Title
+.étapes à suivres :
+=> qd etude par année ne pas oublier d'enlever les années avec pas assez de films
+Définir la metrics et montrer que passer cette metrics n’est pas corrélée à la success metrics
+propensity score: année + ratio H/F avec bechdel pour voir si le bechdel est plus passé avec les annees pcq les scripts changent ou c est juste que y a plus de femmes: Alvaro
+Montrer pour le script share non correlation avec success, augmentation avec les années -> si j enleve les années avec -5 films oui mais avec -10 films la p value devient grande et la corrélation est réduite et propensity score
+Influence du synopsis sur la feminism metrics: en fonction des groupes de mots présents ds le synopsis + decision tree
+regarder ds toutes les features qu on a lesquelles sont reliées à un haut feminism score: Mahdi
+faire un truc jolie où on cherche le nom du film et ca output le incl. score, success score + maybe avec les differents paramètres (rating, revenue, bechdel score, ratio H/F, share of script by women)
+créer site
 ## Usage
-1. Fork (copy) this repository by clicking the "Fork" button on the top right corner.
-2. Go to "Settings" -> "Pages" in your forked repository. Under "Branch" change "None" to "master" and click "Save".
-3. Edit the `_config.yml` file in your forked repository to change the site title (after `title:`) and description (after `description:`).
-4. Build your own page by editing this `README.md` (home page) and creating new `.md` files (other pages), formatting is done with standard [GitHub Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), we provide an example file `example.md` in the repository.
-**Important**: Please include ```--- layout: default ---``` (the first three line in `example.md`) at the beginning of your every newly created `.md` file.
-5. Add your new `.md` files to the site by editing the `_config.yml` file in your forked repository. Under `navigation:` add a new pair of `- title:` and `url:`, and fill their value with your page name and `.md` file name. Remember to remove the `- title:` and `url:` pair for the example page.
-6. Go back to "Settings" -> "Pages" to find your website link.
+
+
+<div style="width: 100%; height: 600px; overflow: hidden;">
+  <iframe src='https://pudding.cool/2017/03/film-dialogue/embed.html' frameborder='0' style="width: 100%; height: 100%; border: none;"></iframe>
+</div>
+.étapes à suivres :
+=> qd etude par année ne pas oublier d'enlever les années avec pas assez de films
+Définir la metrics et montrer que passer cette metrics n’est pas corrélée à la success metrics
+propensity score: année + ratio H/F avec bechdel pour voir si le bechdel est plus passé avec les annees pcq les scripts changent ou c est juste que y a plus de femmes: Alvaro
+Montrer pour le script share non correlation avec success, augmentation avec les années -> si j enleve les années avec -5 films oui mais avec -10 films la p value devient grande et la corrélation est réduite et propensity score
+Influence du synopsis sur la feminism metrics: en fonction des groupes de mots présents ds le synopsis + decision tree
+regarder ds toutes les features qu on a lesquelles sont reliées à un haut feminism score: Mahdi
+faire un truc jolie où on cherche le nom du film et ca output le incl. score, success score + maybe avec les differents paramètres (rating, revenue, bechdel score, ratio H/F, share of script by women)
+créer site
+
+
+.
+.£.
+# test
