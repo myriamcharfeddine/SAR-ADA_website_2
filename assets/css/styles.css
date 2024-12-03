@@ -81,11 +81,13 @@ body {
   right: 0; /* Bring it into view */
 }
 
-
+/* =table of content */
 .toc-menu h2 {
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
+  text-decoration: underline;
+  align-items: center;
 }
 
 /* TOC Styles */
@@ -97,6 +99,10 @@ body {
 .toc-menu li {
   margin-bottom: 5px;
 }
+.toc-menu a {
+  text-decoration: none;
+  color: black;       
+}
 
 .toc-level-1 a {
   font-family: 'Playfair Display', serif;
@@ -106,14 +112,16 @@ body {
 
 .toc-level-2 a {
   font-family: 'Playfair Display', serif;
-  font-size: 1em;
+  font-size: 1.1em;
   margin-left: 15px;
+  font-weight: bold;
 }
 
 .toc-level-3 a {
   font-family: 'Playfair Display', serif;
-  font-size: 0.9em;
+  font-size: 1em;
   margin-left: 30px;
+  font-weight: bold;
 }
 
 /* Heading Styles */

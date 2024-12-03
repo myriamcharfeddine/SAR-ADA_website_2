@@ -41,7 +41,7 @@
   <!-- Scripts -->
 <!-- Place this script just before the closing </body> tag -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     // Toggle menu script
     var navbarToggle = document.querySelector('.navbar-toggle');
     var tocMenu = document.querySelector('.toc-menu');
@@ -53,6 +53,15 @@
     } else {
       console.error('Navbar toggle or TOC menu not found.');
     }
+
+    // Close TOC when clicking outside of it
+    document.addEventListener('click', function(event) {
+      if (tocMenu.classList.contains('visible')) {
+        if (!tocMenu.contains(event.target) && !navbarToggle.contains(event.target)) {
+          tocMenu.classList.remove('visible');
+        }
+      }
+    });
 
     // Generate Table of Contents
     (function() {
@@ -85,7 +94,8 @@
         console.error('Content element or TOC list not found.');
       }
     })();
-  });
+});
+
 </script>
 
 </body>
