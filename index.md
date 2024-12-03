@@ -26,12 +26,15 @@ Montrer pour le script share non correlation avec success, augmentation avec les
 Influence du synopsis sur la feminism metrics: en fonction des groupes de mots présents ds le synopsis + decision tree
 regarder ds toutes les features qu on a lesquelles sont reliées à un haut feminism score: Mahdi
 faire un truc jolie où on cherche le nom du film et ca output le incl. score, success score + maybe avec les differents paramètres (rating, revenue, bechdel score, ratio H/F, share of script by women)
-créer site
+créer site <br />
+<br />
 
-<div style="width: 100%; height: 600px; overflow: hidden;">
-  <iframe src='https://pudding.cool/2017/03/film-dialogue/embed.html' frameborder='0' style="width: 100%; height: 100%; border: none;"></iframe>
+<div style="width: 100%; height: 100vh; overflow: hidden;">
+  <iframe src='https://pudding.cool/2017/03/film-dialogue/embed.html' frameborder='0' style="width: 100%; height: 110%; border: none;"></iframe>
 </div>
 
-.
-.£.
+
+<br />
+<br />
+
 # Part2
