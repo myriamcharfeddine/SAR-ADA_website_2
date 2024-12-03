@@ -16,9 +16,9 @@ créer site
 ## Usage
 
 
-<div style="width: 100%; height: 600px; overflow: hidden;">
+<!-- <div style="width: 100%; height: 600px; overflow: hidden;">
   <iframe src='https://pudding.cool/2017/03/film-dialogue/embed.html' frameborder='0' style="width: 100%; height: 100%; border: none;"></iframe>
-</div>
+</div> -->
 .étapes à suivres :
 => qd etude par année ne pas oublier d'enlever les années avec pas assez de films
 Définir la metrics et montrer que passer cette metrics n’est pas corrélée à la success metrics
@@ -28,7 +28,9 @@ Influence du synopsis sur la feminism metrics: en fonction des groupes de mots p
 regarder ds toutes les features qu on a lesquelles sont reliées à un haut feminism score: Mahdi
 faire un truc jolie où on cherche le nom du film et ca output le incl. score, success score + maybe avec les differents paramètres (rating, revenue, bechdel score, ratio H/F, share of script by women)
 créer site
-
+<div style="width: 100%; height: 600px; overflow: hidden;">
+  <iframe src='https://pudding.cool/2017/03/film-dialogue/embed.html' frameborder='0' style="width: 100%; height: 100%; border: none;"></iframe>
+</div>
 
 .
 .£.

@@ -25,12 +25,13 @@
   </nav>
 
   <!-- Table of Contents -->
-  <div id="toc" class="toc-menu hidden">
+  <div id="toc" class="toc-menu">
     <h2>Table of Contents</h2>
     <ul id="toc-list">
       <!-- TOC will be generated here by JavaScript -->
     </ul>
   </div>
+
 
   <!-- Page Content -->
   <div class="wrapper">
@@ -38,52 +39,54 @@
   </div>
 
   <!-- Scripts -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Toggle menu script
-      var navbarToggle = document.querySelector('.navbar-toggle');
-      var tocMenu = document.querySelector('.toc-menu');
-  
-      if (navbarToggle && tocMenu) {
-        navbarToggle.addEventListener('click', function () {
-          tocMenu.classList.toggle('hidden');
+<!-- Place this script just before the closing </body> tag -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Toggle menu script
+    var navbarToggle = document.querySelector('.navbar-toggle');
+    var tocMenu = document.querySelector('.toc-menu');
+
+    if (navbarToggle && tocMenu) {
+      navbarToggle.addEventListener('click', function () {
+        tocMenu.classList.toggle('visible');
+      });
+    } else {
+      console.error('Navbar toggle or TOC menu not found.');
+    }
+
+    // Generate Table of Contents
+    (function() {
+      var contentElement = document.querySelector('.wrapper');
+      var tocList = document.getElementById('toc-list');
+
+      if (contentElement && tocList) {
+        var headings = contentElement.querySelectorAll('h1, h2, h3, h4, h5, h6');
+
+        headings.forEach(function(heading) {
+          var headingText = heading.textContent || heading.innerText;
+          var headingId = heading.id || headingText.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');
+
+          if (!heading.id) {
+            heading.id = headingId;
+          }
+
+          var li = document.createElement('li');
+          var level = heading.tagName.substring(1);
+          li.className = 'toc-level-' + level;
+
+          var a = document.createElement('a');
+          a.href = '#' + headingId;
+          a.textContent = headingText;
+
+          li.appendChild(a);
+          tocList.appendChild(li);
         });
       } else {
-        console.error('Navbar toggle or TOC menu not found.');
+        console.error('Content element or TOC list not found.');
       }
-  
-      // Generate Table of Contents
-      (function() {
-        var contentElement = document.querySelector('.wrapper');
-        var tocList = document.getElementById('toc-list');
-  
-        if (contentElement && tocList) {
-          var headings = contentElement.querySelectorAll('h1, h2, h3, h4, h5, h6');
-  
-          headings.forEach(function(heading) {
-            var headingText = heading.textContent || heading.innerText;
-            var headingId = heading.id || headingText.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');
-  
-            if (!heading.id) {
-              heading.id = headingId;
-            }
-  
-            var li = document.createElement('li');
-            var level = heading.tagName.substring(1);
-            li.className = 'toc-level-' + level;
-  
-            var a = document.createElement('a');
-            a.href = '#' + headingId;
-            a.textContent = headingText;
-  
-            li.appendChild(a);
-            tocList.appendChild(li);
-          });
-        } else {
-          console.error('Content element or TOC list not found.');
-        }
-      })();
-    });
-  </script>
+    })();
+  });
+</script>
+
 </body>
 </html>

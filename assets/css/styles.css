@@ -65,16 +65,22 @@ body {
 .toc-menu {
   position: fixed;
   top: 70px; /* Adjust this to match navbar height */
-  right: -300px;
+  right: -300px; /* Start off-screen */
   width: 300px;
   height: calc(100% - 70px); /* Adjust height accordingly */
-  background-color: #161515;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.673);
+  background-color: #f8f8f8;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
   transition: right 0.3s ease-in-out;
   z-index: 9998;
   overflow-y: auto;
 }
+
+/* When the menu is visible */
+.toc-menu.visible {
+  right: 0; /* Bring it into view */
+}
+
 
 .toc-menu h2 {
   margin-bottom: 10px;
