@@ -88,8 +88,9 @@ body {
 }
 
 .wrapper {
-  width: 90%;
+  width: 70%;
   max-width: 1080px;
+  text-align: justify;
   margin: 0 auto;
 }
 
@@ -157,11 +158,12 @@ body {
 
 /* =table of content */
 .toc-menu h2 {
+  font-family: "Palatino", serif;
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: bold;
   text-decoration: underline;
-  align-items: center;
+  align-items: center !important;
 }
 
 /* TOC Styles */
@@ -175,24 +177,25 @@ body {
 }
 .toc-menu a {
   text-decoration: none;
+  font-family: "Palatino", serif;
   color: black;       
 }
 
 .toc-level-1 a {
-  font-family: 'Playfair Display', serif;
+  font-family: "Palatino", serif;
   font-size: 1.2em;
   font-weight: bold;
 }
 
 .toc-level-2 a {
-  font-family: 'Playfair Display', serif;
+  font-family: "Palatino", serif;
   font-size: 1.1em;
   margin-left: 15px;
   font-weight: bold;
 }
 
 .toc-level-3 a {
-  font-family: 'Playfair Display', serif;
+  font-family: "Palatino", serif;
   font-size: 1em;
   margin-left: 30px;
   font-weight: bold;
@@ -262,4 +265,16 @@ h6::before {
 
 .hidden {
   display: none;
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: #f2f2f2; /* Light grey background */
+  color: #595959; /* Darker grey for text */
+  text-align: center; /* Center the text */
+  padding: 15px 0; /* Add vertical padding */
+  font-size: 0.9em; /* Slightly smaller font size */
+  position: relative; /* Keep it at the bottom */
+  width: 100%;
+  border-top: 1px solid #e0e0e0; /* Optional: subtle top border for separation */
 }
