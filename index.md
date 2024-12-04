@@ -28,19 +28,13 @@ regarder ds toutes les features qu on a lesquelles sont reliées à un haut femi
 faire un truc jolie où on cherche le nom du film et ca output le incl. score, success score + maybe avec les differents paramètres (rating, revenue, bechdel score, ratio H/F, share of script by women)
 créer site <br />
 <br />
-<br />
-<br />
 
-<div style="width: 100%; height: 100vh; overflow: hidden; margin: 0; padding: 0;">
-  <div style="width: calc(100% / 0.85); height: calc(100% / 0.85); transform: scale(0.85); transform-origin: 0 0;">
-    <iframe src="https://pudding.cool/2017/03/film-dialogue/embed.html" frameborder="0"
-            style="width: 100%; height: 100%; border: none; margin: 0; padding: 0;"></iframe>
-  </div>
+<div style="width: 100%; height: 100vh; overflow: hidden;">
+  <iframe src='https://pudding.cool/2017/03/film-dialogue/embed.html' frameborder='0' style="width: 110%; height: 110%; border: none;"></iframe>
 </div>
 
 
-
-
-
+<br />
+<br />
 
 # Part2
