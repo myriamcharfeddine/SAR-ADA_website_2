@@ -9,16 +9,45 @@ title: "SARteam"
 
 
 
+<br />
+<br />
+
+# Part2
+
+<br />
+<br />
+
+
+**SAR:**  Okay, this Bechdel Test is very interesting. However, if you create a movie with the sole intent of achieving a Bechdel score of 3, this is very easy. You just need to hire two women and write a two-line dialogue about something unrelated to men. Therefore, we aim to create a more meaningful metric to evaluate whether a movie is truly inclusive.<br><br>
+
+The Bechdel score serves as a good starting point for creating an inclusivity metric. However, to improve upon this, we also consider the proportion of actresses in the movie.<br><br>
+
+Even if a movie has only one actress alongside many male actors, it’s possible the woman still holds the lead role. For this reason, we also account for the share of the script held by actresses.<br><br>
+
+Thus, the inclusivity score is calculated as follows:<br><br>
+
+$$
+\text{Inclusivity Score} = \frac{\text{Normalized Bechdel Score} + \text{Promotion of Actress} + \text{Women’s Share of the Script}}{3}
+$$  
+
+<br>
+
+This formula balances three key aspects to evaluate a movie’s inclusivity meaningfully:<br><br>
+
+1. **Normalized Bechdel Score**: The traditional Bechdel score scaled to ensure compatibility with other metrics.<br>
+
+2. **Promotion of Actress**: The proportion of actresses in the movie compared to actors.<br>
+
+3. **Women’s Share of the Script**: The percentage of the script allocated to female characters.<br><br>
+
+This approach ensures a more comprehensive and meaningful evaluation of inclusivity in movies, moving beyond the simplicity of the Bechdel Test.
+
+<br />
 
 <div style="width: 100%; height: 100vh; overflow: hidden;">
   <iframe src='https://pudding.cool/2017/03/film-dialogue/embed.html' frameborder='0' style="width: 110%; height: 110%; border: none;"></iframe>
 </div>
 
-
-<br />
-<br />
-
-# Part2
 <br />
 <br />
 
