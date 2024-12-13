@@ -4,30 +4,11 @@ title: "SARteam"
 ---
 
 # Introduction
-.étapes à suivres :
-=> qd etude par année ne pas oublier d'enlever les années avec pas assez de films
-Définir la metrics et montrer que passer cette metrics n’est pas corrélée à la success metrics
-propensity score: année + ratio H/F avec bechdel pour voir si le bechdel est plus passé avec les annees pcq les scripts changent ou c est juste que y a plus de femmes: Alvaro
-Montrer pour le script share non correlation avec success, augmentation avec les années -> si j enleve les années avec -5 films oui mais avec -10 films la p value devient grande et la corrélation est réduite et propensity score
-Influence du synopsis sur la feminism metrics: en fonction des groupes de mots présents ds le synopsis + decision tree
-regarder ds toutes les features qu on a lesquelles sont reliées à un haut feminism score: Mahdi
-faire un truc jolie où on cherche le nom du film et ca output le incl. score, success score + maybe avec les differents paramètres (rating, revenue, bechdel score, ratio H/F, share of script by women)
-créer site
+
 ## Part1
 
 
-![Octocat](assets/img/imge.jpg)
 
-.étapes à suivres :
-=> qd etude par année ne pas oublier d'enlever les années avec pas assez de films
-Définir la metrics et montrer que passer cette metrics n’est pas corrélée à la success metrics
-propensity score: année + ratio H/F avec bechdel pour voir si le bechdel est plus passé avec les annees pcq les scripts changent ou c est juste que y a plus de femmes: Alvaro
-Montrer pour le script share non correlation avec success, augmentation avec les années -> si j enleve les années avec -5 films oui mais avec -10 films la p value devient grande et la corrélation est réduite et propensity score
-Influence du synopsis sur la feminism metrics: en fonction des groupes de mots présents ds le synopsis + decision tree
-regarder ds toutes les features qu on a lesquelles sont reliées à un haut feminism score: Mahdi
-faire un truc jolie où on cherche le nom du film et ca output le incl. score, success score + maybe avec les differents paramètres (rating, revenue, bechdel score, ratio H/F, share of script by women)
-créer site <br />
-<br />
 
 <div style="width: 100%; height: 100vh; overflow: hidden;">
   <iframe src='https://pudding.cool/2017/03/film-dialogue/embed.html' frameborder='0' style="width: 110%; height: 110%; border: none;"></iframe>
@@ -38,3 +19,28 @@ créer site <br />
 <br />
 
 # Part2
+<br />
+<br />
+
+**Producer:** Okay, this is nice. I guess we will succeed in making an inclusive movie. However, I am concerned that it might affect the success of my movie…
+<br />
+<br />
+Defining what constitutes the success of a movie is not an easy task. Naturally, we want the movie to generate as much revenue as possible, but we also consider it equally important for the movie to be appreciated by the audience. To capture this balance, we introduce a success metric:
+
+$$
+\text{Net Box Office Revenue} = \text{Box Office Revenue} - \text{Initial Budget}
+$$
+
+$$
+\text{Success Metric} = a_1 \cdot \text{rank}(\text{Net Box Office Revenue}) + a_2 \cdot \text{rank}(\text{Rating})
+$$
+
+Here, $$a_1$$ and $$a_2$$ are constants. In this case, we set $$a_1= a_2 = 0.5$$, as we consider both rating and revenue equally important. However, if someone wanted to prioritize either revenue or rating, the constants could be adjusted accordingly.
+<br />
+<br />
+Using the rank of revenue and rating ensures equal weighting between the two metrics, even if the revenue values are significantly large. For example, a movie with the highest revenue in the dataset will have $$\text{rank}(\text{Net Box Office Revenue}) = 1$$. However, if it is the lowest-rated movie, regardless of how large its revenue is $$\text{rank}(\text{Rating}) = 0$$ In this case, the success metric would be of 0.5. This ranking approach prevents the success metric from being disproportionately influenced by very high revenue figures, ensuring that both factors contribute fairly to the final score.
+<br />
+<br />
+<br />
+<br />
+
