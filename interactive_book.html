@@ -1,0 +1,94 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Book</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css" id="theme">
+    <style>
+        .slide-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .text-content {
+            width: 60%;
+            padding-right: 20px;
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: left;
+        }
+        .image-content {
+            width: 35%;
+            text-align: center;
+        }
+        .image-content img {
+            max-width: 100%;
+            height: auto;
+        }
+        .slide-caption {
+            text-align: center;
+            font-style: italic;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+<section>
+    <div class="slide-content">
+        <div class="text-content">
+            <h2>Pearson Correlation</h2>
+            <p>
+        The Pearson correlation will be used systematically on all the features,
+        allowing us to extract a first glimpse of which of them is significant 
+        on the rating difference. The Pearson correlation measures the linear correlation 
+        between two sets of data, so by measuring the Pearson Correlation Coefficient (PCC) 
+        between one feature and the rating difference, we will extract the linear correlation between both.
+        
+        The significance threshold has been chosen at the p-value of 0.05 since it's the most commonly used value.
+        </p>
+        </div>
+        <div class="image-content">
+            <img src="karl_pearson_with_hat.png" alt="Karl Pearson">
+            <div class="slide-caption">Karl Pearson</div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="slide-content">
+        <div class="text-content">
+            <h2>Top Features</h2>
+            <p>
+        In general, the plots will display up to the top and bottom 10 significant features,
+        based on the magnitude of the Pearson correlation. This allows us to pinpoint
+        which features have the greatest impact on the target variable.
+        </p>
+        </div>
+        <div class="image-content">
+            <img src="features_plot.png" alt="Feature Importance">
+            <div class="slide-caption">Feature Importance</div>
+        </div>
+    </div>
+</section>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            slideNumber: true,
+            history: true,
+            transition: 'slide' // Can be 'fade', 'slide', 'convex', 'concave', or 'zoom'
+        });
+    </script>
+</body>
+</html>
