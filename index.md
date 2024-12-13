@@ -5,14 +5,14 @@ title: "SARteam"
 
 # Introduction
 
-## Part1
+## The Bechdel Score
 
 
 
 <br />
 <br />
 
-# Part2
+# The Inclusivity Score
 
 <br />
 <br />
@@ -46,6 +46,8 @@ This approach ensures a more comprehensive and meaningful evaluation of inclusiv
 
 <br />
 <br />
+
+# The Success Metric
 
 **Producer:** Okay, this is nice. I guess we will succeed in making an inclusive movie. However, I am concerned that it might affect the success of my movie…
 <br />
