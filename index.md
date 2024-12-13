@@ -18,11 +18,9 @@ title: "SARteam"
 <br />
 
 
-**SAR team:**  Okay, this Bechdel Test is very interesting. However, if you create a movie with the sole intent of achieving a Bechdel score of 3, this is very easy. You just need to hire two women and write a two-line dialogue about something unrelated to men. Therefore, we aim to create a more meaningful metric to evaluate whether a movie is truly inclusive.<br><br>
+**SAR team:**  Okay, this Bechdel Test is very interesting. However, if you create a movie with the intent of achieving a Bechdel score of 3, this is very easy. You just need to hire two women and write a two-line dialogue about something unrelated to men. Therefore, we aim to create a more meaningful metric to evaluate whether a movie is truly inclusive.<br><br>
 
-The Bechdel score serves as a good starting point for creating an inclusivity metric. However, to improve upon this, we also consider the proportion of actresses in the movie.<br><br>
-
-Even if a movie has only one actress alongside many male actors, it’s possible the woman still holds the lead role. For this reason, we also account for the share of the script held by actresses.<br><br>
+The Bechdel score provides a solid foundation for developing an inclusivity metric. To build on this, we also evaluate the proportion of actresses in the movie to assess the level of female representation. However, this alone is insufficient. A movie may feature many women in minor or background roles, or conversely, a single actress who takes on the lead role. Therefore, we also consider the share of the script attributed to actresses to capture their meaningful presence in the film.<br><br>
 
 Thus, the inclusivity score is calculated as follows:<br><br>
 
@@ -31,8 +29,6 @@ $$
 $$  
 
 <br>
-
-This formula balances three key aspects to evaluate a movie’s inclusivity meaningfully:<br><br>
 
 1. **Normalized Bechdel Score**: The traditional Bechdel score scaled to ensure compatibility with other metrics.<br>
 
