@@ -71,4 +71,4 @@ Using the rank of revenue and rating ensures equal weighting between the two met
 <br />
 <br />
 
-<iframe src="interactive_book.html" width="100%" height="500"></iframe>
+
