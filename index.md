@@ -18,7 +18,7 @@ title: "SARteam"
 <br />
 
 
-**SAR:**  Okay, this Bechdel Test is very interesting. However, if you create a movie with the sole intent of achieving a Bechdel score of 3, this is very easy. You just need to hire two women and write a two-line dialogue about something unrelated to men. Therefore, we aim to create a more meaningful metric to evaluate whether a movie is truly inclusive.<br><br>
+**SAR team:**  Okay, this Bechdel Test is very interesting. However, if you create a movie with the sole intent of achieving a Bechdel score of 3, this is very easy. You just need to hire two women and write a two-line dialogue about something unrelated to men. Therefore, we aim to create a more meaningful metric to evaluate whether a movie is truly inclusive.<br><br>
 
 The Bechdel score serves as a good starting point for creating an inclusivity metric. However, to improve upon this, we also consider the proportion of actresses in the movie.<br><br>
 
