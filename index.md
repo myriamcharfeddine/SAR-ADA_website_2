@@ -5,6 +5,19 @@ title: "SARteam"
 
 # Introduction
 
+<!-- Search Widget -->
+<div class="search-widget">
+  <label for="searchInput">Search your favourite movie:</label>
+  <input type="text" id="searchInput" placeholder="Type a movie title...">
+  <div id="resultContainer">
+    <!-- Results will be displayed here -->
+  </div>
+</div>
+
+<script src="/SAR-ADA_website/search_engine/search.js"></script>
+
+# test2
+
 # The Bechdel Score
 
 
@@ -71,5 +84,5 @@ Using the rank of revenue and rating ensures equal weighting between the two met
 <br />
 <br />
 
-
 bllalalzffef
+
