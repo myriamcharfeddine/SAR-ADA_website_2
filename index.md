@@ -21,6 +21,8 @@ title: "SARteam"
 # The Bechdel Score
 
 
+{% include movie_dashboard.html %}
+
 
 <br />
 <br />
@@ -83,6 +85,4 @@ Using the rank of revenue and rating ensures equal weighting between the two met
 <br />
 <br />
 <br />
-
-bllalalzffef
 

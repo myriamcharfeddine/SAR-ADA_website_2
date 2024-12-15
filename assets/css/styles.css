@@ -278,3 +278,90 @@ h6::before {
   width: 100%;
   border-top: 1px solid #e0e0e0; /* Optional: subtle top border for separation */
 }
+
+
+/* Search Widget Styles */
+.search-widget {
+  background-color: #e57373; /* Slightly softer red */
+  border-radius: 12px; /* Rounder corners for a modern look */
+  padding: 20px; /* Add space inside the container */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+
+.search-widget label {
+  display: inline-block; /* Ensure label is inline with the input */
+  margin-bottom: 5px;    /* Reduce space below the label */
+  margin-right: 10px;    /* Add space between the label and input */
+  font-size: 18px;
+  font-weight: bold;
+  color: #5a1f1f; /* Darker red tone for better contrast */
+}
+
+#searchInput {
+  border: 2px solid #cc5555; /* Softer border */
+  border-radius: 8px;
+  box-shadow: none; /* Remove extra shadow */
+  padding: 12px;
+  font-size: 16px;
+}
+
+#searchInput:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #a94442; /* Slightly darker border on focus */
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.2); /* Subtle glow */
+}
+
+#searchButton {
+  background-color: #97c3f1;
+  color: #6f9a89;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+  background-color: #0056b3;
+}
+
+#resultContainer {
+  background-color: #fce4e4; /* Light pink to complement the red widget */
+  padding: 15px; /* Add padding for spacing */
+  border-radius: 8px; /* Match the widget's rounded corners */
+  margin-top: 10px; /* Add spacing above the result section */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Add depth */
+  border: 1px solid #cc5555; /* Subtle border to match widget */
+}
+
+#resultContainer p {
+  margin: 5px 0; /* Space out the lines for readability */
+  font-size: 16px;
+}
+
+#resultContainer strong {
+  color: #121111; /* Neutral color for readability */
+}
+
+#searchInput:hover {
+  border-color: #a94442; /* Slightly darker red */
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.2); /* Glow effect */
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  .search-widget {
+    padding: 15px;
+  }
+
+  #searchInput {
+    font-size: 14px;
+  }
+
+  #searchButton {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}
