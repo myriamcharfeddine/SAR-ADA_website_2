@@ -3,10 +3,10 @@ layout: default
 title: "SARteam"
 ---
 
-
 # Introduction
-For over a century, cinema has played a pivotal role in shaping societal perceptions and cultural narratives. 
-Yet, while the industry has seen technological and creative advancements, the representation of women has remained trapped in 
+
+For over a century, cinema has played a pivotal role in shaping societal perceptions and cultural narratives.
+Yet, while the industry has seen technological and creative advancements, the representation of women has remained trapped in
 archaic stereotypes. Actresses have often been assigned to secondary roles, limited by narrow character tropes and overshadowed by their male counterparts.
 <br>
 Through this analysis, we’re here to empower you to create a blockbuster that doesn’t just shine at the box office but also sets a new standard for equality in cinema. We'll guide you through the key ingredients for crafting a film that is as inclusive as it is successful.
@@ -76,14 +76,7 @@ Understanding the most common character tropes for women and men in cinema provi
   </div>
 </div>
 
-
-
-
 # The Bechdel Score
-
-
-<!-- {% include movie_dashboard.html %} -->
-
 
 <br />
 <br />
@@ -93,8 +86,7 @@ Understanding the most common character tropes for women and men in cinema provi
 <br />
 <br />
 
-
-**SAR team:**  Okay, this Bechdel Test is very interesting. However, if you create a movie with the intent of achieving a Bechdel score of 3, this is very easy. You just need to hire two women and write a two-line dialogue about something unrelated to men. Therefore, we aim to create a more meaningful metric to evaluate whether a movie is truly inclusive.<br><br>
+**SAR team:** Okay, this Bechdel Test is very interesting. However, if you create a movie with the intent of achieving a Bechdel score of 3, this is very easy. You just need to hire two women and write a two-line dialogue about something unrelated to men. Therefore, we aim to create a more meaningful metric to evaluate whether a movie is truly inclusive.<br><br>
 
 The Bechdel score provides a solid foundation for developing an inclusivity metric. To build on this, we also evaluate the proportion of actresses in the movie to assess the level of female representation. However, this alone is insufficient. A movie may feature many women in minor or background roles, or conversely, a single actress who takes on the lead role. Therefore, we also consider the share of the script attributed to actresses to capture their meaningful presence in the film.<br>
 Indeed, looking at the distribution of the script in the figure below provided by [The Pudding](https://pudding.cool/2017/03/film-dialogue/). Only 24% of movies show an equal dialogue distribution between women and men!
@@ -104,12 +96,11 @@ Indeed, looking at the distribution of the script in the figure below provided b
   <iframe src='https://pudding.cool/2017/03/film-dialogue/embed.html' frameborder='0' style="width: 110%; height: 110%; border: none;"></iframe>
 </div>
 
-
 Thus, the inclusivity score is calculated as follows:<br><br>
 
 $$
 \text{Inclusivity Score} = \frac{\text{Normalized Bechdel Score} + \text{Promotion of Actress} + \text{Women’s Share of the Script}}{3}
-$$  
+$$
 
 <br>
 
@@ -125,14 +116,14 @@ This approach ensures a more comprehensive and meaningful evaluation of inclusiv
 
 **Producer:** This Inclusivity score is a good idea, but I have done some research. Look, movies with high success scores all have very poor representation ratings. I want to help the film industry become more equitable, but I don’t want my movie to fail.
 
+{% include movie_dashboard.html %}
+
 <br />
 Indeed, when examining movies ranked by either their inclusivity or their success, we observe a potential negative correlation between inclusivity and success. Specifically, less inclusive movies appear to be more successful compared to their more inclusive counterparts. However, conducting both Pearson and Spearman correlation analyses provides a reassuring perspective, as the results indicate only a weak negative correlation. The Pearson correlation coefficient is -0.125 (p-value = 6.82e-05), and the Spearman correlation coefficient is -0.126 (p-value = 6.33e-05). While the low p-values indicate the results are statistically significant, the correlation coefficients are close to zero, signifying a very weak association. This suggests no meaningful evidence of inclusivity negatively impacting a movie's success.
 
 <br />
 
-**SAR team:** You can be reassured, if your movie is good, prioritizing inclusivity will not harm its success. However, there is still significant progress to be made before inclusivity becomes the norm in movie industry. While we would expect that inclusivity positively contributes to a movie’s success, we are far from it. Achieving this will require continued efforts, such as better representation of women in storytelling and active advocacy within the industry. 
-
-
+**SAR team:** You can be reassured, if your movie is good, prioritizing inclusivity will not harm its success. However, there is still significant progress to be made before inclusivity becomes the norm in movie industry. While we would expect that inclusivity positively contributes to a movie’s success, we are far from it. Achieving this will require continued efforts, such as better representation of women in storytelling and active advocacy within the industry.
 
 <br />
 <br />
@@ -159,7 +150,6 @@ Using the rank of revenue and rating ensures equal weighting between the two met
 <br />
 <br />
 
-
 <br />
 <br />
 
@@ -171,13 +161,8 @@ Using the rank of revenue and rating ensures equal weighting between the two met
     <!-- Results will be displayed here -->
   </div>
 </div>
-
-<<<<<<< Updated upstream
 <script src="/SAR-ADA_website/search_engine/search.js"></script>
-
 <br />
 <br />
 <br />
 <br />
-=======
->>>>>>> Stashed changes
