@@ -15,7 +15,7 @@
       }
 
       .title {
-        font-size: 18px;
+        font-size: 16px;
         color: #333;
         text-align: center;
         margin-bottom: 10px;
@@ -51,7 +51,7 @@
       }
 
       #slider-label {
-        font-size: 18px;
+        font-size: 16px;
         color: #333;
         text-align: center;
         margin-bottom: 10px;
@@ -91,13 +91,13 @@
       .movie-text h1 {
         text-align: center;
         margin-bottom: 10px;
-        font-size: 50px;
+        font-size: 30px;
         color: #333333;
         font-family: "Open Sans", sans-serif;
       }
 
       .movie-text p {
-        font-size: 18px;
+        font-size: 16px;
         color: #333333;
         font-family: "Open Sans", sans-serif;
         margin-top: 10px;
@@ -105,13 +105,13 @@
 
       .movie-text span {
         font-family: "Open Sans", sans-serif;
-        font-size: 18px;
+        font-size: 16px;
         color: #333333;
       }
 
       .bold-label {
         font-weight: bold;
-        font-size: 22px;
+        font-size: 28px;
         color: #333333;
       }
     </style>
@@ -676,7 +676,7 @@
             values.forEach((v) => {
               marks[v] = {
                 label: `${v}`,
-                style: { fontSize: "14px", color: "#333" },
+                style: { fontSize: "12px", color: "#333" },
               };
             });
             return marks;
@@ -876,7 +876,9 @@
             movieInfo.innerHTML = `
           <div class="movie-display">
             <div style="flex:1; text-align:center; padding:10px;">
-              <img src="${movie.image}" />
+              <img src="${
+                movie.image
+              }" style="max-width: 80%; max-height: 300px;" />
               <br/>
             </div>
             <div class="movie-text">
