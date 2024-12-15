@@ -16,12 +16,11 @@ title: "SARteam"
 
 <script src="/SAR-ADA_website/search_engine/search.js"></script>
 
-# test2
 
 # The Bechdel Score
 
 
-{% include movie_dashboard.html %}
+<!-- {% include movie_dashboard.html %} -->
 
 
 <br />
