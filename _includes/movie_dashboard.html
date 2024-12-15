@@ -797,6 +797,20 @@
           });
 
           movieSlider.addEventListener("input", () => {
+            const { dataset, metric } = get_dataset_and_metric(
+              metricDropdown.value
+            );
+            const metric_values = dataset.map((m) => m[metric]);
+            const sliderValue = parseFloat(movieSlider.value);
+
+            // Snap to closest valid value in the dataset
+            const closestValue = metric_values.reduce((prev, curr) =>
+              Math.abs(curr - sliderValue) < Math.abs(prev - sliderValue)
+                ? curr
+                : prev
+            );
+
+            movieSlider.value = closestValue; // Update slider value to the closest valid option
             updateDisplay();
           });
 
@@ -871,7 +885,7 @@
 
               <p>
                 <span class="bold-label">Inclusivity Score: </span>
-                <span style="color:${bechdel_color(movie.bechdel_score)};">${
+                <span style="color:${score_color(movie.inclusivity_score)};">${
               movie.inclusivity_score
             }</span><br/>
                 <span>Bechdel Score: </span>
