@@ -5,6 +5,76 @@ title: "SARteam"
 
 
 # Introduction
+For over a century, cinema has played a pivotal role in shaping societal perceptions and cultural narratives. 
+Yet, while the industry has seen technological and creative advancements, the representation of women has remained trapped in 
+archaic stereotypes. Actresses have often been assigned to secondary roles, limited by narrow character tropes and overshadowed by their male counterparts.
+<br>
+Through this analysis, we’re here to empower you to create a blockbuster that doesn’t just shine at the box office but also sets a new standard for equality in cinema. We'll guide you through the key ingredients for crafting a film that is as inclusive as it is successful.
+Because while inclusivity is the mission, success is the name of the game and our recommendations are designed to deliver both. So, let’s pull back the curtain on the current industry landscape and explore the challenges that stand between you and a truly groundbreaking, inclusive film.
+
+# Behind the curtain: The current state of women in cinema
+
+<div style="display: flex; justify-content: center; align-items: center; margin: 60px auto; max-width: 1000px;">
+
+  <!-- Text Section -->
+  <div style="flex: 1; padding-right: 40px; max-width: 50%; display: flex; align-items: center;">
+    <p style="line-height: 1.8; font-size: 1.2em; margin: 0;">
+      To truly understand the challenges women face in the film industry, we must first examine the current landscape.
+      <br>
+      This visualization highlights the current gender distribution in cinema, underscoring the imbalance that persists. 
+      As expected, a significant difference is observed in the number of actors between men and women. Here, men represent 
+      66.18% of the actors, while women account for 33.82%. Now, the question is: even if women have always been 
+      underrepresented in cinema since its inception, has their representation increased over the years?
+    </p>
+  </div>
+  <!-- gender distribution -->
+  <div style="flex: 1; max-width: 50%; display: flex; justify-content: center;">
+    <iframe src="assets/gender_distribution.html" width="100%" height="430px" style="border: none;"></iframe>
+  </div>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; margin: 60px 0;">
+  <!-- gender distribution over the year -->
+  <div style="width: 100%; max-width: 1000px; text-align: center;">
+    <iframe src="assets/gender_distribution_years.html" width="100%" height="600px" style="border: none;"></iframe>
+  </div>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; margin: 60px 0;">
+  <!-- Actor ratio per movie over the years -->
+  <div style="width: 100%; max-width: 1000px; text-align: center;">
+    <iframe src="assets/actor_ratio_per_movie.html" width="100%" height="600px" style="border: none;"></iframe>
+  </div>
+
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; margin: 60px 0;">
+  <!-- pourcentage women by genre -->
+  <div style="width: 100%; max-width: 1000px; text-align: center;">
+    <iframe src="assets/pourcentage_women_by_genre.html" width="100%" height="600px" style="border: none;"></iframe>
+  </div>
+
+</div>
+
+## Top Tropes for Women and Men in Cinema
+
+Understanding the most common character tropes for women and men in cinema provides insight into how gender roles have been historically depicted. The visualizations below highlight the top tropes for female and male characters.
+
+### Top Tropes for Women
+
+<div style="display: flex; justify-content: center; align-items: center; margin: 40px auto; max-width: 1000px;">
+  <div style="flex: 1; max-width: 100%; text-align: center;">
+    <iframe src="assets/top_tropes_women.html" width="100%" height="500px" style="border: none;"></iframe>
+  </div>
+</div>
+
+### Top Tropes for Men
+
+<div style="display: flex; justify-content: center; align-items: center; margin: 40px auto; max-width: 1000px;">
+  <div style="flex: 1; max-width: 100%; text-align: center;">
+    <iframe src="assets/top_tropes_men.html" width="100%" height="500px" style="border: none;"></iframe>
+  </div>
+</div>
 
 
 
@@ -102,9 +172,12 @@ Using the rank of revenue and rating ensures equal weighting between the two met
   </div>
 </div>
 
+<<<<<<< Updated upstream
 <script src="/SAR-ADA_website/search_engine/search.js"></script>
 
 <br />
 <br />
 <br />
 <br />
+=======
+>>>>>>> Stashed changes
