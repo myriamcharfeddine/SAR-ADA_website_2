@@ -131,7 +131,10 @@
       </div>
 
       <div class="slider-container">
-        <div id="slider-label">Select a Movie by Inclusivity Score:</div>
+        <div id="slider-label">
+          Select a Movie by Inclusivity Score:
+          <span id="slider-value"></span>
+        </div>
         <input type="range" id="movie-slider" step="any" />
       </div>
 
@@ -152,448 +155,510 @@
 
           console.log("len", movies_data.length);
 
+          const moviesLookup = {};
+          movies_data.forEach((movie) => {
+            moviesLookup[movie["Unnamed: 0"]] = movie;
+          });
+
           const movies_inclusivity = [
             {
-              title: movies_data[1].title,
+              title: moviesLookup[3393]?.title,
               image: "./assets/img/img_movies/Now_and_then.jpg",
-              inclusivity_score: rnd(movies_data[1].incl_score),
-              bechdel_score: rnd(movies_data[1].Bechdel_score),
-              proportion_of_actress: rnd(movies_data[1].proportion_actress),
-              share_of_women_script: rnd(movies_data[1].female_script),
-              success_score: rnd(movies_data[1].SuccessMetric),
-              Imdb_rating: rnd(movies_data[1].rating),
-              revenue: movies_data[1].Net_revenue,
-              year: movies_data[1].Year,
+              inclusivity_score: rnd(moviesLookup[3393]?.incl_score),
+              bechdel_score: rnd(moviesLookup[3393]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[3393]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[3393]?.female_script),
+              success_score: rnd(moviesLookup[3393]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[3393]?.rating),
+              revenue: moviesLookup[3393]?.Net_revenue,
+              year: moviesLookup[3393]?.Year,
               synopsis:
-                "Four childhood friends gather together to prepare for the birth of Chrissey's baby. They wonder how the girls they were at 12 years could possibly have become the women they are now.",
+                "Four childhood friends gather together to prepare for the birth of Chrissey's baby. They wonder how the girls they were at 12 could possibly have become the women they are now.",
             },
             {
-              title: movies_data[2].title,
+              title: moviesLookup[24211]?.title,
               image: "./assets/img/img_movies/saving_private_ryan.jpg",
-              inclusivity_score: rnd(movies_data[2].incl_score),
-              bechdel_score: rnd(movies_data[2].Bechdel_score),
-              proportion_of_actress: rnd(movies_data[2].proportion_actress),
-              share_of_women_script: rnd(movies_data[2].female_script),
-              success_score: rnd(movies_data[2].SuccessMetric),
-              Imdb_rating: rnd(movies_data[2].rating),
-              revenue: movies_data[2].Net_revenue,
-              year: movies_data[2].Year,
+              inclusivity_score: rnd(moviesLookup[24211]?.incl_score),
+              bechdel_score: rnd(moviesLookup[24211]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[24211]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[24211]?.female_script),
+              success_score: rnd(moviesLookup[24211]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[24211]?.rating),
+              revenue: moviesLookup[24211]?.Net_revenue,
+              year: moviesLookup[24211]?.Year,
               synopsis:
                 "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
             },
-
             {
-              title: movies_data[3].title,
+              title: moviesLookup[56028]?.title,
               image: "./assets/img/img_movies/training_day.jpg",
-              inclusivity_score: rnd(movies_data[3].incl_score),
-              bechdel_score: rnd(movies_data[3].Bechdel_score),
-              proportion_of_actress: rnd(movies_data[3].proportion_actress),
-              share_of_women_script: rnd(movies_data[3].female_script),
-              success_score: rnd(movies_data[3].SuccessMetric),
-              Imdb_rating: rnd(movies_data[3].rating),
-              revenue: movies_data[3].Net_revenue,
-              year: movies_data[3].Year,
+              inclusivity_score: rnd(moviesLookup[56028]?.incl_score),
+              bechdel_score: rnd(moviesLookup[56028]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[56028]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[56028]?.female_script),
+              success_score: rnd(moviesLookup[56028]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[56028]?.rating),
+              revenue: moviesLookup[56028]?.Net_revenue,
+              year: moviesLookup[56028]?.Year,
               synopsis:
                 "A rookie cop spends his first day as a Los Angeles narcotics officer with a rogue detective who isn't what he appears to be.",
             },
-            // {
-            //   title: movies_data[61462].title,
-            //   image: "./assets/img/img_movies/michel_clayton.jpg",
-            //   inclusivity_score: rnd(movies_data[61462].incl_score),
-            //   bechdel_score: rnd(movies_data[61462].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[61462].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[61462].female_script),
-            //   success_score: rnd(movies_data[61462].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[61462].rating),
-            //   revenue: movies_data[61462].Net_revenue,
-            //   year: movies_data[61462].Year,
-            //   synopsis:
-            //     "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
-            // },
-            // {
-            //   title: movies_data[14367].title,
-            //   image: "./assets/img/img_movies/requiem_for_a_dream.jpg",
-            //   inclusivity_score: rnd(movies_data[14367].incl_score),
-            //   bechdel_score: rnd(movies_data[14367].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[14367].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[14367].female_script),
-            //   success_score: rnd(movies_data[14367].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[14367].rating),
-            //   revenue: movies_data[14367].Net_revenue,
-            //   year: movies_data[14367].Year,
-            //   synopsis:
-            //     "The drug-induced utopias of four Coney Island people are shattered when their addictions run deep.",
-            // },
-            // {
-            //   title: movies_data[4302].title,
-            //   image: "./assets/img/img_movies/little_children.jpg",
-            //   inclusivity_score: rnd(movies_data[4302].incl_score),
-            //   bechdel_score: rnd(movies_data[4302].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[4302].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[4302].female_script),
-            //   success_score: rnd(movies_data[4302].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[4302].rating),
-            //   revenue: movies_data[4302].Net_revenue,
-            //   year: movies_data[4302].Year,
-            //   synopsis:
-            //     "The lives of two lovelorn spouses from separate marriages, a registered sex offender, and a disgraced ex-police officer intersect as they struggle to resist their vulnerabilities and temptations in suburban Massachusetts.",
-            // },
-            // {
-            //   title: movies_data[6243].title,
-            //   image: "./assets/img/img_movies/please_give.jpg",
-            //   inclusivity_score: rnd(movies_data[6243].incl_score),
-            //   bechdel_score: rnd(movies_data[6243].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[6243].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[6243].female_script),
-            //   success_score: rnd(movies_data[6243].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[6243].rating),
-            //   revenue: movies_data[6243].Net_revenue,
-            //   year: movies_data[6243].Year,
-            //   synopsis:
-            //     "In New York City, a husband and wife butt heads with the granddaughters of the elderly woman who lives in the apartment the couple owns.",
-            // },
-            // {
-            //   title: movies_data[63003].title,
-            //   image: "./assets/img/img_movies/saw4.jpg",
-            //   inclusivity_score: rnd(movies_data[63003].incl_score),
-            //   bechdel_score: rnd(movies_data[63003].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[63003].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[63003].female_script),
-            //   success_score: rnd(movies_data[63003].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[63003].rating),
-            //   revenue: movies_data[63003].Net_revenue,
-            //   year: movies_data[63003].Year,
-            //   synopsis:
-            //     "Despite Jigsaw's death, and in order to save the lives of two of his colleagues, Lieutenant Rigg is forced to take part in a new game, which promises to test him to the limit.",
-            // },
-            // {
-            //   title: movies_data[6282].title,
-            //   image: "./assets/img/img_movies/insomnia.jpg",
-            //   inclusivity_score: rnd(movies_data[6282].incl_score),
-            //   bechdel_score: rnd(movies_data[6282].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[6282].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[6282].female_script),
-            //   success_score: rnd(movies_data[6282].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[6282].rating),
-            //   revenue: movies_data[6282].Net_revenue,
-            //   year: movies_data[6282].Year,
-            //   synopsis:
-            //     "Will Dormer, a police detective, is sent to investigate a teenage girl's murder to a small fishing town where he accidentally shoots his co-detective and is afflicted by insomnia brought by the guilt.",
-            // },
-            // {
-            //   title: movies_data[5016].title,
-            //   image: "./assets/img/img_movies/The_hustler.jpg",
-            //   inclusivity_score: rnd(movies_data[5016].incl_score),
-            //   bechdel_score: rnd(movies_data[5016].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[5016].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[5016].female_script),
-            //   success_score: rnd(movies_data[5016].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[5016].rating),
-            //   revenue: movies_data[5016].Net_revenue,
-            //   year: movies_data[5016].Year,
-            //   synopsis:
-            //     "An up-and-coming pool player plays a long-time champion in a single high-stakes match.",
-            // },
+            {
+              title: moviesLookup[61462]?.title,
+              image: "./assets/img/img_movies/michel_clayton.jpg",
+              inclusivity_score: rnd(moviesLookup[61462]?.incl_score),
+              bechdel_score: rnd(moviesLookup[61462]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[61462]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[61462]?.female_script),
+              success_score: rnd(moviesLookup[61462]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[61462]?.rating),
+              revenue: moviesLookup[61462]?.Net_revenue,
+              year: moviesLookup[61462]?.Year,
+              synopsis:
+                "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
+            },
+            {
+              title: moviesLookup[14367]?.title,
+              image: "./assets/img/img_movies/requiem_for_a_dream.jpg",
+              inclusivity_score: rnd(moviesLookup[14367]?.incl_score),
+              bechdel_score: rnd(moviesLookup[14367]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[14367]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[14367]?.female_script),
+              success_score: rnd(moviesLookup[14367]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[14367]?.rating),
+              revenue: moviesLookup[14367]?.Net_revenue,
+              year: moviesLookup[14367]?.Year,
+              synopsis:
+                "The drug-induced utopias of four Coney Island people are shattered when their addictions run deep.",
+            },
+            {
+              title: moviesLookup[4302]?.title,
+              image: "./assets/img/img_movies/little_children.jpg",
+              inclusivity_score: rnd(moviesLookup[4302]?.incl_score),
+              bechdel_score: rnd(moviesLookup[4302]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[4302]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[4302]?.female_script),
+              success_score: rnd(moviesLookup[4302]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[4302]?.rating),
+              revenue: moviesLookup[4302]?.Net_revenue,
+              year: moviesLookup[4302]?.Year,
+              synopsis:
+                "The lives of two lovelorn spouses from separate marriages, a registered sex offender, and a disgraced ex-police officer intersect as they struggle to resist their vulnerabilities and temptations in suburban Massachusetts.",
+            },
+            {
+              title: moviesLookup[6243]?.title,
+              image: "./assets/img/img_movies/please_give.jpg",
+              inclusivity_score: rnd(moviesLookup[6243]?.incl_score),
+              bechdel_score: rnd(moviesLookup[6243]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[6243]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[6243]?.female_script),
+              success_score: rnd(moviesLookup[6243]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[6243]?.rating),
+              revenue: moviesLookup[6243]?.Net_revenue,
+              year: moviesLookup[6243]?.Year,
+              synopsis:
+                "In New York City, a husband and wife butt heads with the granddaughters of the elderly woman who lives in the apartment the couple owns.",
+            },
+            {
+              title: moviesLookup[63003]?.title,
+              image: "./assets/img/img_movies/saw4.jpg",
+              inclusivity_score: rnd(moviesLookup[63003]?.incl_score),
+              bechdel_score: rnd(moviesLookup[63003]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[63003]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[63003]?.female_script),
+              success_score: rnd(moviesLookup[63003]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[63003]?.rating),
+              revenue: moviesLookup[63003]?.Net_revenue,
+              year: moviesLookup[63003]?.Year,
+              synopsis:
+                "Despite Jigsaw's death, and in order to save the lives of two of his colleagues, Lieutenant Rigg is forced to take part in a new game, which promises to test him to the limit.",
+            },
+            {
+              title: moviesLookup[6282]?.title,
+              image: "./assets/img/img_movies/insomnia.jpg",
+              inclusivity_score: rnd(moviesLookup[6282]?.incl_score),
+              bechdel_score: rnd(moviesLookup[6282]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[6282]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[6282]?.female_script),
+              success_score: rnd(moviesLookup[6282]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[6282]?.rating),
+              revenue: moviesLookup[6282]?.Net_revenue,
+              year: moviesLookup[6282]?.Year,
+              synopsis:
+                "Will Dormer, a police detective, is sent to investigate a teenage girl's murder to a small fishing town where he accidentally shoots his co-detective and is afflicted by insomnia brought by the guilt.",
+            },
+            {
+              title: moviesLookup[5016]?.title,
+              image: "./assets/img/img_movies/The_hustler.jpg",
+              inclusivity_score: rnd(moviesLookup[5016]?.incl_score),
+              bechdel_score: rnd(moviesLookup[5016]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[5016]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[5016]?.female_script),
+              success_score: rnd(moviesLookup[5016]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[5016]?.rating),
+              revenue: moviesLookup[5016]?.Net_revenue,
+              year: moviesLookup[5016]?.Year,
+              synopsis:
+                "An up-and-coming pool player plays a long-time champion in a single high-stakes match.",
+            },
           ];
 
           const movies_success = [
             {
-              title: movies_data[2].title,
+              title: moviesLookup[80920]?.title,
               image: "./assets/img/img_movies/lord_ring.jpg",
-              inclusivity_score: rnd(movies_data[2].incl_score),
-              bechdel_score: rnd(movies_data[2].Bechdel_score),
-              proportion_of_actress: rnd(movies_data[2].proportion_actress),
-              share_of_women_script: rnd(movies_data[2].female_script),
-              success_score: rnd(movies_data[2].SuccessMetric),
-              Imdb_rating: rnd(movies_data[2].rating),
-              revenue: movies_data[2].Net_revenue,
-              year: movies_data[2].Year,
+              inclusivity_score: rnd(moviesLookup[80920]?.incl_score),
+              bechdel_score: rnd(moviesLookup[80920]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[80920]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[80920]?.female_script),
+              success_score: rnd(moviesLookup[80920]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[80920]?.rating),
+              revenue: moviesLookup[80920]?.Net_revenue,
+              year: moviesLookup[80920]?.Year,
               synopsis:
                 "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
             },
             {
-              title: movies_data[1].title,
+              title: moviesLookup[54401]?.title,
               image: "./assets/img/img_movies/monkeybone.jpg",
-              inclusivity_score: rnd(movies_data[1].incl_score),
-              bechdel_score: rnd(movies_data[1].Bechdel_score),
-              proportion_of_actress: rnd(movies_data[1].proportion_actress),
-              share_of_women_script: rnd(movies_data[1].female_script),
-              success_score: rnd(movies_data[1].SuccessMetric),
-              Imdb_rating: rnd(movies_data[1].rating),
-              revenue: movies_data[1].Net_revenue,
-              year: movies_data[1].Year,
+              inclusivity_score: rnd(moviesLookup[54401]?.incl_score),
+              bechdel_score: rnd(moviesLookup[54401]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[54401]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[54401]?.female_script),
+              success_score: rnd(moviesLookup[54401]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[54401]?.rating),
+              revenue: moviesLookup[54401]?.Net_revenue,
+              year: moviesLookup[54401]?.Year,
               synopsis:
                 "In a coma, a cartoonist finds himself trapped within his own underground creation and must find a way to get back, while racing against his popular but treacherous character, Monkeybone.",
             },
-            // {
-            //   title: movies_data[48341].title,
-            //   image: "./assets/img/img_movies/Little_nicky.jpg",
-            //   inclusivity_score: rnd(movies_data[48341].incl_score),
-            //   bechdel_score: rnd(movies_data[48341].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[48341].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[48341].female_script),
-            //   success_score: rnd(movies_data[48341].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[48341].rating),
-            //   revenue: movies_data[48341].Net_revenue,
-            //   year: movies_data[48341].Year,
-            //   synopsis:
-            //     "After two of the devil's three sons escape Hell to wreak havoc on Earth, the devil must send his third son, the mild-mannered Nicky, to bring them back before it's too late.",
-            // },
-            // {
-            //   title: movies_data[19276].title,
-            //   image: "./assets/img/img_movies/legend.jpg",
-            //   inclusivity_score: rnd(movies_data[19276].incl_score),
-            //   bechdel_score: rnd(movies_data[19276].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[19276].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[19276].female_script),
-            //   success_score: rnd(movies_data[19276].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[19276].rating),
-            //   revenue: movies_data[19276].Net_revenue,
-            //   year: movies_data[19276].Year,
-            //   synopsis:
-            //     "In the waning days of the 19th century, dime novelist Ernest Pratt assumes the persona of his noble literary hero, Nicodemus Legend, and roams the Old West with his scientist friend Dr. Janos Bartok.",
-            // },
-            // {
-            //   title: movies_data[1053].title,
-            //   image: "./assets/img/img_movies/death_smoo.jpg",
-            //   inclusivity_score: rnd(movies_data[1053].incl_score),
-            //   bechdel_score: rnd(movies_data[1053].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[1053].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[1053].female_script),
-            //   success_score: rnd(movies_data[1053].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[1053].rating),
-            //   revenue: movies_data[1053].Net_revenue,
-            //   year: movies_data[1053].Year,
-            //   synopsis:
-            //     "A kids' show host, Rainbow Randolph, is fired in disgrace while his replacement, Sheldon Mopes, A.K.A. Smoochy the Rhino, finds himself a rising star. Unfortunately for Sheldon, the business of kids' television isn't all child's play.",
-            // },
-            // {
-            //   title: movies_data[562].title,
-            //   image: "./assets/img/img_movies/next.jpg",
-            //   inclusivity_score: rnd(movies_data[562].incl_score),
-            //   bechdel_score: rnd(movies_data[562].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[562].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[562].female_script),
-            //   success_score: rnd(movies_data[562].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[562].rating),
-            //   revenue: movies_data[562].Net_revenue,
-            //   year: movies_data[562].Year,
-            //   synopsis:
-            //     "A Las Vegas magician who can see into the future is pursued by FBI agents seeking to use his abilities to prevent a nuclear terrorist attack.",
-            // },
-            // {
-            //   title: movies_data[11373].title,
-            //   image: "./assets/img/img_movies/frighteners.jpg",
-            //   inclusivity_score: rnd(movies_data[11373].incl_score),
-            //   bechdel_score: rnd(movies_data[11373].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[11373].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[11373].female_script),
-            //   success_score: rnd(movies_data[11373].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[11373].rating),
-            //   revenue: movies_data[11373].Net_revenue,
-            //   year: movies_data[11373].Year,
-            //   synopsis:
-            //     "After a tragic car accident that kills his wife, a man discovers he can communicate with the dead, and he uses that gift to con people. However, when a demonic spirit appears, he may be the only one who can stop it from killing the living and the dead.",
-            // },
-            // {
-            //   title: movies_data[3840].title,
-            //   image: "./assets/img/img_movies/octopussy.jpg",
-            //   inclusivity_score: rnd(movies_data[3840].incl_score),
-            //   bechdel_score: rnd(movies_data[3840].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[3840].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[3840].female_script),
-            //   success_score: rnd(movies_data[3840].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[3840].rating),
-            //   revenue: movies_data[3840].Net_revenue,
-            //   year: movies_data[3840].Year,
-            //   synopsis:
-            //     "A fake Fabergé egg recovered from the body of a fellow agent leads James Bond to uncover a jewel smuggling operation led by the mysterious Octopussy, and a plot to blow up a NATO air base.",
-            // },
-            // {
-            //   title: movies_data[33265].title,
-            //   image: "./assets/img/img_movies/addams_fam.jpg",
-            //   inclusivity_score: rnd(movies_data[33265].incl_score),
-            //   bechdel_score: rnd(movies_data[33265].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[33265].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[33265].female_script),
-            //   success_score: rnd(movies_data[33265].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[33265].rating),
-            //   revenue: movies_data[33265].Net_revenue,
-            //   year: movies_data[33265].Year,
-            //   synopsis:
-            //     "The Addams Family try to rescue their beloved Uncle Fester from his gold-digging new love, a black widow named Debbie.",
-            // },
-            // {
-            //   title: movies_data[14453].title,
-            //   image: "./assets/img/img_movies/spiderman2.jpg",
-            //   inclusivity_score: rnd(movies_data[14453].incl_score),
-            //   bechdel_score: rnd(movies_data[14453].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[14453].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[14453].female_script),
-            //   success_score: rnd(movies_data[14453].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[14453].rating),
-            //   revenue: movies_data[14453].Net_revenue,
-            //   year: movies_data[14453].Year,
-            //   synopsis:
-            //     "Spider-Man/Peter Parker struggles between his personal life which involves Mary Jane Watson and his superhero life where he joins up with a vigilante known as Black Cat battling a series of foes including the mad Doc Ock.",
-            // },
-            // {
-            //   title: movies_data[33659].title,
-            //   image: "./assets/img/img_movies/twilight.jpg",
-            //   inclusivity_score: rnd(movies_data[33659].incl_score),
-            //   bechdel_score: rnd(movies_data[33659].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[33659].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[33659].female_script),
-            //   success_score: rnd(movies_data[33659].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[33659].rating),
-            //   revenue: movies_data[33659].Net_revenue,
-            //   year: movies_data[33659].Year,
-            //   synopsis:
-            //     "When Bella Swan moves to a small town in the Pacific Northwest, she falls in love with Edward Cullen, a mysterious classmate who reveals himself to be a 108-year-old vampire.",
-            // },
+            {
+              title: moviesLookup[48341]?.title,
+              image: "./assets/img/img_movies/Little_nicky.jpg",
+              inclusivity_score: rnd(moviesLookup[48341]?.incl_score),
+              bechdel_score: rnd(moviesLookup[48341]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[48341]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[48341]?.female_script),
+              success_score: rnd(moviesLookup[48341]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[48341]?.rating),
+              revenue: moviesLookup[48341]?.Net_revenue,
+              year: moviesLookup[48341]?.Year,
+              synopsis:
+                "After two of the devil's three sons escape Hell to wreak havoc on Earth, the devil must send his third son, the mild-mannered Nicky, to bring them back before it's too late.",
+            },
+            {
+              title: moviesLookup[19276]?.title,
+              image: "./assets/img/img_movies/legend.jpg",
+              inclusivity_score: rnd(moviesLookup[19276]?.incl_score),
+              bechdel_score: rnd(moviesLookup[19276]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[19276]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[19276]?.female_script),
+              success_score: rnd(moviesLookup[19276]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[19276]?.rating),
+              revenue: moviesLookup[19276]?.Net_revenue,
+              year: moviesLookup[19276]?.Year,
+              synopsis:
+                "In the waning days of the 19th century, dime novelist Ernest Pratt assumes the persona of his noble literary hero, Nicodemus Legend, and roams the Old West with his scientist friend Dr. Janos Bartok.",
+            },
+            {
+              title: moviesLookup[1053]?.title,
+              image: "./assets/img/img_movies/death_smoo.jpg",
+              inclusivity_score: rnd(moviesLookup[1053]?.incl_score),
+              bechdel_score: rnd(moviesLookup[1053]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[1053]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[1053]?.female_script),
+              success_score: rnd(moviesLookup[1053]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[1053]?.rating),
+              revenue: moviesLookup[1053]?.Net_revenue,
+              year: moviesLookup[1053]?.Year,
+              synopsis:
+                "A kids' show host, Rainbow Randolph, is fired in disgrace while his replacement, Sheldon Mopes, A.K.A. Smoochy the Rhino, finds himself a rising star. Unfortunately for Sheldon, the business of kids' television isn't all child's play.",
+            },
+            {
+              title: moviesLookup[562]?.title,
+              image: "./assets/img/img_movies/next.jpg",
+              inclusivity_score: rnd(moviesLookup[562]?.incl_score),
+              bechdel_score: rnd(moviesLookup[562]?.Bechdel_score),
+              proportion_of_actress: rnd(moviesLookup[562]?.proportion_actress),
+              share_of_women_script: rnd(moviesLookup[562]?.female_script),
+              success_score: rnd(moviesLookup[562]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[562]?.rating),
+              revenue: moviesLookup[562]?.Net_revenue,
+              year: moviesLookup[562]?.Year,
+              synopsis:
+                "A Las Vegas magician who can see into the future is pursued by FBI agents seeking to use his abilities to prevent a nuclear terrorist attack.",
+            },
+            {
+              title: moviesLookup[11373]?.title,
+              image: "./assets/img/img_movies/frighteners.jpg",
+              inclusivity_score: rnd(moviesLookup[11373]?.incl_score),
+              bechdel_score: rnd(moviesLookup[11373]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[11373]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[11373]?.female_script),
+              success_score: rnd(moviesLookup[11373]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[11373]?.rating),
+              revenue: moviesLookup[11373]?.Net_revenue,
+              year: moviesLookup[11373]?.Year,
+              synopsis:
+                "After a tragic car accident that kills his wife, a man discovers he can communicate with the dead, and he uses that gift to con people. However, when a demonic spirit appears, he may be the only one who can stop it from killing the living and the dead.",
+            },
+            {
+              title: moviesLookup[3840]?.title,
+              image: "./assets/img/img_movies/octopussy.jpg",
+              inclusivity_score: rnd(moviesLookup[3840]?.incl_score),
+              bechdel_score: rnd(moviesLookup[3840]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[3840]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[3840]?.female_script),
+              success_score: rnd(moviesLookup[3840]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[3840]?.rating),
+              revenue: moviesLookup[3840]?.Net_revenue,
+              year: moviesLookup[3840]?.Year,
+              synopsis:
+                "A fake Fabergé egg recovered from the body of a fellow agent leads James Bond to uncover a jewel smuggling operation led by the mysterious Octopussy, and a plot to blow up a NATO air base.",
+            },
+            {
+              title: moviesLookup[33265]?.title,
+              image: "./assets/img/img_movies/addams_fam.jpg",
+              inclusivity_score: rnd(moviesLookup[33265]?.incl_score),
+              bechdel_score: rnd(moviesLookup[33265]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[33265]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[33265]?.female_script),
+              success_score: rnd(moviesLookup[33265]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[33265]?.rating),
+              revenue: moviesLookup[33265]?.Net_revenue,
+              year: moviesLookup[33265]?.Year,
+              synopsis:
+                "The Addams Family try to rescue their beloved Uncle Fester from his gold-digging new love, a black widow named Debbie.",
+            },
+            {
+              title: moviesLookup[14453]?.title,
+              image: "./assets/img/img_movies/spiderman2.jpg",
+              inclusivity_score: rnd(moviesLookup[14453]?.incl_score),
+              bechdel_score: rnd(moviesLookup[14453]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[14453]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[14453]?.female_script),
+              success_score: rnd(moviesLookup[14453]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[14453]?.rating),
+              revenue: moviesLookup[14453]?.Net_revenue,
+              year: moviesLookup[14453]?.Year,
+              synopsis:
+                "Spider-Man/Peter Parker struggles between his personal life which involves Mary Jane Watson and his superhero life where he joins up with a vigilante known as Black Cat battling a series of foes including the mad Doc Ock.",
+            },
+            {
+              title: moviesLookup[33659]?.title,
+              image: "./assets/img/img_movies/twilight.jpg",
+              inclusivity_score: rnd(moviesLookup[33659]?.incl_score),
+              bechdel_score: rnd(moviesLookup[33659]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[33659]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[33659]?.female_script),
+              success_score: rnd(moviesLookup[33659]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[33659]?.rating),
+              revenue: moviesLookup[33659]?.Net_revenue,
+              year: moviesLookup[33659]?.Year,
+              synopsis:
+                "When Bella Swan moves to a small town in the Pacific Northwest, she falls in love with Edward Cullen, a mysterious classmate who reveals himself to be a 108-year-old vampire.",
+            },
           ];
 
           const movies_mean = [
             {
-              title: movies_data[3].title,
+              title: moviesLookup[38676]?.title,
               image: "./assets/img/img_movies/red_planet.jpg",
-              inclusivity_score: rnd(movies_data[3].incl_score),
-              bechdel_score: rnd(movies_data[3].Bechdel_score),
-              proportion_of_actress: rnd(movies_data[3].proportion_actress),
-              share_of_women_script: rnd(movies_data[3].female_script),
-              success_score: rnd(movies_data[3].SuccessMetric),
-              Imdb_rating: rnd(movies_data[3].rating),
-              revenue: movies_data[3].Net_revenue,
-              year: movies_data[3].Year,
+              inclusivity_score: rnd(moviesLookup[38676]?.incl_score),
+              bechdel_score: rnd(moviesLookup[38676]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[38676]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[38676]?.female_script),
+              success_score: rnd(moviesLookup[38676]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[38676]?.rating),
+              revenue: moviesLookup[38676]?.Net_revenue,
+              year: moviesLookup[38676]?.Year,
               synopsis:
                 "Astronauts, and their robotic dog AMEE (Autonomous Mapping Evaluation and Evasion), search for solutions to save a dying Earth by searching on Mars, only to have the mission go terribly awry.",
             },
             {
-              title: movies_data[1].title,
+              title: moviesLookup[65016]?.title,
               image: "./assets/img/img_movies/The_Help.jpg",
-              inclusivity_score: rnd(movies_data[1].incl_score),
-              bechdel_score: rnd(movies_data[1].Bechdel_score),
-              proportion_of_actress: rnd(movies_data[1].proportion_actress),
-              share_of_women_script: rnd(movies_data[1].female_script),
-              success_score: rnd(movies_data[1].SuccessMetric),
-              Imdb_rating: rnd(movies_data[1].rating),
-              revenue: movies_data[1].Net_revenue,
-              year: movies_data[1].Year,
+              inclusivity_score: rnd(moviesLookup[65016]?.incl_score),
+              bechdel_score: rnd(moviesLookup[65016]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[65016]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[65016]?.female_script),
+              success_score: rnd(moviesLookup[65016]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[65016]?.rating),
+              revenue: moviesLookup[65016]?.Net_revenue,
+              year: moviesLookup[65016]?.Year,
               synopsis:
                 "An aspiring author during the civil rights movement of the 1960s decides to write a book detailing the African American maids' point of view on the white families for which they work, and the hardships they go through on a daily basis.",
             },
-            // {
-            //   title: movies_data[59053].title,
-            //   image: "./assets/img/img_movies/cosmopolis.jpg",
-            //   inclusivity_score: rnd(movies_data[59053].incl_score),
-            //   bechdel_score: rnd(movies_data[59053].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[59053].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[59053].female_script),
-            //   success_score: rnd(movies_data[59053].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[59053].rating),
-            //   revenue: movies_data[59053].Net_revenue,
-            //   year: movies_data[59053].Year,
-            //   synopsis:
-            //     "A 28-year-old billionaire senses his empire collapsing around him.",
-            // },
-            // {
-            //   title: movies_data[1053].title,
-            //   image: "./assets/img/img_movies/death_smoo.jpg",
-            //   inclusivity_score: rnd(movies_data[1053].incl_score),
-            //   bechdel_score: rnd(movies_data[1053].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[1053].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[1053].female_script),
-            //   success_score: rnd(movies_data[1053].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[1053].rating),
-            //   revenue: movies_data[1053].Net_revenue,
-            //   year: movies_data[1053].Year,
-            //   synopsis:
-            //     "A kids' show host, Rainbow Randolph, is fired in disgrace while his replacement, Sheldon Mopes, A.K.A. Smoochy the Rhino, finds himself a rising star. Unfortunately for Sheldon, the business of kids' television isn't all child's play.",
-            // },
-            // {
-            //   title: movies_data[23617].title,
-            //   image: "./assets/img/img_movies/exorcist.jpg",
-            //   inclusivity_score: rnd(movies_data[23617].incl_score),
-            //   bechdel_score: rnd(movies_data[23617].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[23617].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[23617].female_script),
-            //   success_score: rnd(movies_data[23617].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[23617].rating),
-            //   revenue: movies_data[23617].Net_revenue,
-            //   year: movies_data[23617].Year,
-            //   synopsis:
-            //     "When a mysterious entity possesses a young girl, her mother seeks the help of two Catholic priests to save her life.",
-            // },
-            // {
-            //   title: movies_data[562].title,
-            //   image: "./assets/img/img_movies/next.jpg",
-            //   inclusivity_score: rnd(movies_data[562].incl_score),
-            //   bechdel_score: rnd(movies_data[562].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[562].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[562].female_script),
-            //   success_score: rnd(movies_data[562].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[562].rating),
-            //   revenue: movies_data[562].Net_revenue,
-            //   year: movies_data[562].Year,
-            //   synopsis:
-            //     "A Las Vegas magician who can see into the future is pursued by FBI agents seeking to use his abilities to prevent a nuclear terrorist attack.",
-            // },
-            // {
-            //   title: movies_data[33265].title,
-            //   image: "./assets/img/img_movies/addams_fam.jpg",
-            //   inclusivity_score: rnd(movies_data[33265].incl_score),
-            //   bechdel_score: rnd(movies_data[33265].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[33265].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[33265].female_script),
-            //   success_score: rnd(movies_data[33265].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[33265].rating),
-            //   revenue: movies_data[33265].Net_revenue,
-            //   year: movies_data[33265].Year,
-            //   synopsis:
-            //     "The Addams Family try to rescue their beloved Uncle Fester from his gold-digging new love, a black widow named Debbie.",
-            // },
-            // {
-            //   title: movies_data[33659].title,
-            //   image: "./assets/img/img_movies/twilight.jpg",
-            //   inclusivity_score: rnd(movies_data[33659].incl_score),
-            //   bechdel_score: rnd(movies_data[33659].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[33659].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[33659].female_script),
-            //   success_score: rnd(movies_data[33659].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[33659].rating),
-            //   revenue: movies_data[33659].Net_revenue,
-            //   year: movies_data[33659].Year,
-            //   synopsis:
-            //     "When Bella Swan moves to a small town in the Pacific Northwest, she falls in love with Edward Cullen, a mysterious classmate who reveals himself to be a 108-year-old vampire.",
-            // },
-            // {
-            //   title: movies_data[3840].title,
-            //   image: "./assets/img/img_movies/octopussy.jpg",
-            //   inclusivity_score: rnd(movies_data[3840].incl_score),
-            //   bechdel_score: rnd(movies_data[3840].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[3840].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[3840].female_script),
-            //   success_score: rnd(movies_data[3840].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[3840].rating),
-            //   revenue: movies_data[3840].Net_revenue,
-            //   year: movies_data[3840].Year,
-            //   synopsis:
-            //     "A fake Fabergé egg recovered from the body of a fellow agent leads James Bond to uncover a jewel smuggling operation led by the mysterious Octopussy, and a plot to blow up a NATO air base.",
-            // },
-            // {
-            //   title: movies_data[14453].title,
-            //   image: "./assets/img/img_movies/spiderman2.jpg",
-            //   inclusivity_score: rnd(movies_data[14453].incl_score),
-            //   bechdel_score: rnd(movies_data[14453].Bechdel_score),
-            //   proportion_of_actress: rnd(movies_data[14453].proportion_actress),
-            //   share_of_women_script: rnd(movies_data[14453].female_script),
-            //   success_score: rnd(movies_data[14453].SuccessMetric),
-            //   Imdb_rating: rnd(movies_data[14453].rating),
-            //   revenue: movies_data[14453].Net_revenue,
-            //   year: movies_data[14453].Year,
-            //   synopsis:
-            //     "Spider-Man/Peter Parker struggles between his personal life which involves Mary Jane Watson and his superhero life where he joins up with a vigilante known as Black Cat battling a series of foes including the mad Doc Ock.",
-            // },
+            {
+              title: moviesLookup[59053]?.title,
+              image: "./assets/img/img_movies/cosmopolis.jpg",
+              inclusivity_score: rnd(moviesLookup[59053]?.incl_score),
+              bechdel_score: rnd(moviesLookup[59053]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[59053]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[59053]?.female_script),
+              success_score: rnd(moviesLookup[59053]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[59053]?.rating),
+              revenue: moviesLookup[59053]?.Net_revenue,
+              year: moviesLookup[59053]?.Year,
+              synopsis:
+                "A 28-year-old billionaire senses his empire collapsing around him.",
+            },
+            {
+              title: moviesLookup[1053]?.title,
+              image: "./assets/img/img_movies/death_smoo.jpg",
+              inclusivity_score: rnd(moviesLookup[1053]?.incl_score),
+              bechdel_score: rnd(moviesLookup[1053]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[1053]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[1053]?.female_script),
+              success_score: rnd(moviesLookup[1053]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[1053]?.rating),
+              revenue: moviesLookup[1053]?.Net_revenue,
+              year: moviesLookup[1053]?.Year,
+              synopsis:
+                "A kids' show host, Rainbow Randolph, is fired in disgrace while his replacement, Sheldon Mopes, A.K.A. Smoochy the Rhino, finds himself a rising star. Unfortunately for Sheldon, the business of kids' television isn't all child's play.",
+            },
+            {
+              title: moviesLookup[23617]?.title,
+              image: "./assets/img/img_movies/exorcist.jpg",
+              inclusivity_score: rnd(moviesLookup[23617]?.incl_score),
+              bechdel_score: rnd(moviesLookup[23617]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[23617]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[23617]?.female_script),
+              success_score: rnd(moviesLookup[23617]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[23617]?.rating),
+              revenue: moviesLookup[23617]?.Net_revenue,
+              year: moviesLookup[23617]?.Year,
+              synopsis:
+                "When a mysterious entity possesses a young girl, her mother seeks the help of two Catholic priests to save her life.",
+            },
+            {
+              title: moviesLookup[562]?.title,
+              image: "./assets/img/img_movies/next.jpg",
+              inclusivity_score: rnd(moviesLookup[562]?.incl_score),
+              bechdel_score: rnd(moviesLookup[562]?.Bechdel_score),
+              proportion_of_actress: rnd(moviesLookup[562]?.proportion_actress),
+              share_of_women_script: rnd(moviesLookup[562]?.female_script),
+              success_score: rnd(moviesLookup[562]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[562]?.rating),
+              revenue: moviesLookup[562]?.Net_revenue,
+              year: moviesLookup[562]?.Year,
+              synopsis:
+                "A Las Vegas magician who can see into the future is pursued by FBI agents seeking to use his abilities to prevent a nuclear terrorist attack.",
+            },
+            {
+              title: moviesLookup[33265]?.title,
+              image: "./assets/img/img_movies/addams_fam.jpg",
+              inclusivity_score: rnd(moviesLookup[33265]?.incl_score),
+              bechdel_score: rnd(moviesLookup[33265]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[33265]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[33265]?.female_script),
+              success_score: rnd(moviesLookup[33265]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[33265]?.rating),
+              revenue: moviesLookup[33265]?.Net_revenue,
+              year: moviesLookup[33265]?.Year,
+              synopsis:
+                "The Addams Family try to rescue their beloved Uncle Fester from his gold-digging new love, a black widow named Debbie.",
+            },
+            {
+              title: moviesLookup[33659]?.title,
+              image: "./assets/img/img_movies/twilight.jpg",
+              inclusivity_score: rnd(moviesLookup[33659]?.incl_score),
+              bechdel_score: rnd(moviesLookup[33659]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[33659]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[33659]?.female_script),
+              success_score: rnd(moviesLookup[33659]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[33659]?.rating),
+              revenue: moviesLookup[33659]?.Net_revenue,
+              year: moviesLookup[33659]?.Year,
+              synopsis:
+                "When Bella Swan moves to a small town in the Pacific Northwest, she falls in love with Edward Cullen, a mysterious classmate who reveals himself to be a 108-year-old vampire.",
+            },
+            {
+              title: moviesLookup[3840]?.title,
+              image: "./assets/img/img_movies/octopussy.jpg",
+              inclusivity_score: rnd(moviesLookup[3840]?.incl_score),
+              bechdel_score: rnd(moviesLookup[3840]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[3840]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[3840]?.female_script),
+              success_score: rnd(moviesLookup[3840]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[3840]?.rating),
+              revenue: moviesLookup[3840]?.Net_revenue,
+              year: moviesLookup[3840]?.Year,
+              synopsis:
+                "A fake Fabergé egg recovered from the body of a fellow agent leads James Bond to uncover a jewel smuggling operation led by the mysterious Octopussy, and a plot to blow up a NATO air base.",
+            },
+            {
+              title: moviesLookup[14453]?.title,
+              image: "./assets/img/img_movies/spiderman2.jpg",
+              inclusivity_score: rnd(moviesLookup[14453]?.incl_score),
+              bechdel_score: rnd(moviesLookup[14453]?.Bechdel_score),
+              proportion_of_actress: rnd(
+                moviesLookup[14453]?.proportion_actress
+              ),
+              share_of_women_script: rnd(moviesLookup[14453]?.female_script),
+              success_score: rnd(moviesLookup[14453]?.SuccessMetric),
+              Imdb_rating: rnd(moviesLookup[14453]?.rating),
+              revenue: moviesLookup[14453]?.Net_revenue,
+              year: moviesLookup[14453]?.Year,
+              synopsis:
+                "Spider-Man/Peter Parker struggles between his personal life which involves Mary Jane Watson and his superhero life where he joins up with a vigilante known as Black Cat battling a series of foes including the mad Doc Ock.",
+            },
           ];
 
           // Compute mean if not precomputed
@@ -754,7 +819,25 @@
               .sort((a, b) => a[metric] - b[metric]);
             const metric_values = sorted_movies.map((m) => m[metric]);
 
-            // If current slider value not in metric_values, set to first
+            // Create or update a datalist for ticks
+            let dataList = document.getElementById("slider-ticks");
+            if (!dataList) {
+              dataList = document.createElement("datalist");
+              dataList.id = "slider-ticks";
+              document.body.appendChild(dataList); // Append to body or container
+            }
+            dataList.innerHTML = ""; // Clear old options
+
+            metric_values.forEach((v) => {
+              const option = document.createElement("option");
+              option.value = v;
+              option.label = v; // May not show by default in all browsers
+              dataList.appendChild(option);
+            });
+
+            // Ensure the slider references this datalist
+            movieSlider.setAttribute("list", "slider-ticks");
+
             let sliderVal = parseFloat(movieSlider.value);
             if (isNaN(sliderVal) || !metric_values.includes(sliderVal)) {
               sliderVal = metric_values[0];
@@ -763,73 +846,69 @@
             // Update slider attributes
             movieSlider.min = Math.min(...metric_values);
             movieSlider.max = Math.max(...metric_values);
-            // Attempt to place steps at each metric value
-            // For a continuous slider in HTML, we can't have multiple discrete steps easily,
-            // but we can make the step very small.
-            // We'll just keep step small and show the user the label above.
-            movieSlider.step = (movieSlider.max - movieSlider.min) / 100;
-
-            // Set slider to current value
+            // Use a step that allows arbitrary moves but snapping to list values:
+            // "any" means no enforced step, but the user can stop at datalist values easily.
+            movieSlider.step = "any";
             movieSlider.value = sliderVal;
 
-            sliderLabel.textContent = `Select a Movie by ${display_metric_name}:`;
+            sliderLabel.innerHTML = `Select a Movie by ${display_metric_name}: <span id="slider-value"></span>`;
+            const sliderValueSpan = document.getElementById("slider-value");
+            sliderValueSpan.textContent = sliderVal;
 
-            // Find the selected movie
             const movie =
               sorted_movies.find((m) => m[metric] == sliderVal) ||
               sorted_movies[0];
 
-            // Build the movie display
             movieInfo.innerHTML = `
-    <div class="movie-display">
-      <div style="flex:1; text-align:center; padding:10px;">
-        <img src="${movie.image}" />
-        <br/>
-      </div>
-      <div class="movie-text">
-        <h1>${movie.title}</h1>
-        <p><span class="bold-label">Year: </span>${movie.year}</p>
+          <div class="movie-display">
+            <div style="flex:1; text-align:center; padding:10px;">
+              <img src="${movie.image}" />
+              <br/>
+            </div>
+            <div class="movie-text">
+              <h1>${movie.title}</h1>
+              <p><span class="bold-label">Year: </span>${movie.year}</p>
 
-        <p>
-          <span class="bold-label">Inclusivity Score: </span>
-          <span style="color:${bechdel_color(movie.bechdel_score)};">${
+              <p>
+                <span class="bold-label">Inclusivity Score: </span>
+                <span style="color:${bechdel_color(movie.bechdel_score)};">${
               movie.inclusivity_score
             }</span><br/>
-          <span>Bechdel Score: </span>
-          <span style="color:${bechdel_color(movie.bechdel_score)};">${
+                <span>Bechdel Score: </span>
+                <span style="color:${bechdel_color(movie.bechdel_score)};">${
               movie.bechdel_score
             }</span><br/>
-          <span>Proportion of Actress: </span>
-          <span style="color:${score_color(movie.proportion_of_actress)};">${
-              movie.proportion_of_actress
-            }</span><br/>
-          <span>Share of Women Script: </span>
-          <span style="color:${score_color(movie.share_of_women_script)};">${
-              movie.share_of_women_script
-            }</span>
-        </p>
+                <span>Proportion of Actress: </span>
+                <span style="color:${score_color(
+                  movie.proportion_of_actress
+                )};">${movie.proportion_of_actress}</span><br/>
+                <span>Share of Women Script: </span>
+                <span style="color:${score_color(
+                  movie.share_of_women_script
+                )};">${movie.share_of_women_script}</span>
+              </p>
 
-        <p>
-          <span class="bold-label">Success Score: </span>
-          <span style="color:${score_color(movie.success_score)};">${
+              <p>
+                <span class="bold-label">Success Score: </span>
+                <span style="color:${score_color(movie.success_score)};">${
               movie.success_score
             }</span><br/>
-          <span>Imdb rating: </span>
-          <span style="color:${score_color(movie.Imdb_rating)};">${
+                <span>Imdb rating: </span>
+                <span style="color:${score_color(movie.Imdb_rating)};">${
               movie.Imdb_rating
             }</span><br/>
-          <span>Box Office Revenue: </span>
-          <span style="color:${revenue_color(
-            movie.revenue
-          )};">$${movie.revenue.toLocaleString()}</span>
-        </p>
+                <span>Box Office Revenue: </span>
+                <span style="color:${revenue_color(
+                  movie.revenue
+                )};">$${movie.revenue.toLocaleString()}</span>
+              </p>
 
-        <p>
-          <span class="bold-label">Synopsis: </span>${movie.synopsis}
-        </p>
-      </div>
-    </div>
-  `;
+              <p>
+                <span class="bold-label">Synopsis: </span>${movie.synopsis}
+              </p>
+            </div>
+          </div>
+        `;
           }
 
           // Initial display
