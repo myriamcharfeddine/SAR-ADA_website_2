@@ -10,8 +10,10 @@ Yet, while the industry has seen technological and creative advancements, the re
 archaic stereotypes. Actresses have often been assigned to secondary roles, limited by narrow character tropes and overshadowed by their male counterparts.
 </p>
 <br>
+<p class="indent">
 Through this analysis, we’re here to empower you to create a blockbuster that doesn’t just shine at the box office but also sets a new standard for equality in cinema. We'll guide you through the key ingredients for crafting a film that is as inclusive as it is successful.
 Because while inclusivity is the mission, success is the name of the game and our recommendations are designed to deliver both. So, let’s pull back the curtain on the current industry landscape and explore the challenges that stand between you and a truly groundbreaking, inclusive film.
+</p>
 
 # Behind the curtain: The current state of women in cinema
 
@@ -147,8 +149,13 @@ To add: Bechdel + Genre
 
 <strong>SAR team:</strong> Okay, this Bechdel Test is very interesting. However, if you create a movie with the intent of achieving a Bechdel score of 3, this is very easy. You just need to hire two women and write a two-line dialogue about something unrelated to men. Therefore, we aim to create a more meaningful metric to evaluate whether a movie is truly inclusive.<br><br>
 
-The Bechdel score provides a solid foundation for developing an inclusivity metric. To build on this, we also evaluate the proportion of actresses in the movie to assess the level of female representation. However, this alone is insufficient. A movie may feature many women in minor or background roles, or conversely, a single actress who takes on the lead role. Therefore, we also consider the share of the script attributed to actresses to capture their meaningful presence in the film.<br>
-Indeed, looking at the distribution of the script in the figure below provided by [The Pudding](https://pudding.cool/2017/03/film-dialogue/). Only 24% of movies show an equal dialogue or more female distribution of the script!
+<p class="indent"> The Bechdel score provides a solid foundation for developing an inclusivity metric. To build on this, we also evaluate the proportion of actresses in the movie to assess the level of female representation. However, this alone is insufficient. A movie may feature many women in minor or background roles, or conversely, a single actress who takes on the lead role. Therefore, we also consider the share of the script attributed to actresses to capture their meaningful presence in the film.
+</p>
+<p class="indent">
+    Indeed, looking at the distribution of the script in the figure below provided by 
+    <a href="https://pudding.cool/2017/03/film-dialogue/" target="_blank" rel="noopener noreferrer">The Pudding</a>. 
+    Only 24% of movies show an equal dialogue or more female distribution of the script!
+</p>
 
 <br>
 <div style="width: 100%; height: 100vh; overflow: hidden;">
@@ -158,54 +165,59 @@ Indeed, looking at the distribution of the script in the figure below provided b
 Thus, the inclusivity score is calculated as follows:<br><br>
 
 $$
-\text{Inclusivity Score} = \frac{\text{Normalized Bechdel Score} + \text{Promotion of Actress} + \text{Women’s Share of the Script}}{3}
+\textbf{Inclusivity Score} = \frac{\text{Normalized Bechdel Score} + \text{Promotion of Actress} + \text{Women’s Share of the Script}}{3}
 $$
 
 <br>
 
-1. **Normalized Bechdel Score**: The traditional Bechdel score scaled to ensure compatibility with other metrics.<br>
+1. </strong>Normalized Bechdel Score</strong>: The traditional Bechdel score scaled to ensure compatibility with other metrics.<br>
 
-2. **Promotion of Actress**: The proportion of actresses in the movie compared to actors.<br>
+2. </strong>Promotion of Actress</strong>: The proportion of actresses in the movie compared to actors.<br>
 
-3. **Women’s Share of the Script**: The percentage of the script allocated to female characters.<br><br>
+3. </strong>Women’s Share of the Script</strong>: The percentage of the script allocated to female characters.<br><br>
 
 This approach ensures a more comprehensive and meaningful evaluation of inclusivity in movies, moving beyond the simplicity of the Bechdel Test.
 
 <br />
 
-**Producer:** This Inclusivity score is a good idea, but I have done some research. Look, movies with high success scores all have very poor representation ratings. I want to help the film industry become more equitable, but I don’t want my movie to fail.
+</strong>Producer:</strong> This Inclusivity score is a good idea, but I have done some research. Look, movies with high success scores all have very poor representation ratings. I want to help the film industry become more equitable, but I don’t want my movie to fail.
 
 {% include movie_dashboard.html %}
 
 <br />
-Indeed, when examining movies ranked by either their inclusivity or their success, we observe a potential negative correlation between inclusivity and success. Specifically, less inclusive movies appear to be more successful compared to their more inclusive counterparts. However, conducting both Pearson and Spearman correlation analyses provides a reassuring perspective, as the results indicate only a weak negative correlation. The Pearson correlation coefficient is -0.125 (p-value = 6.82e-05), and the Spearman correlation coefficient is -0.126 (p-value = 6.33e-05). While the low p-values indicate the results are statistically significant, the correlation coefficients are close to zero, signifying a very weak association. This suggests no meaningful evidence of inclusivity negatively impacting a movie's success.
+<p class="indent"> Indeed, when examining movies ranked by either their inclusivity or their success, we observe a potential negative correlation between inclusivity and success. Specifically, less inclusive movies appear to be more successful compared to their more inclusive counterparts. However, conducting both Pearson and Spearman correlation analyses provides a reassuring perspective, as the results indicate only a weak negative correlation. The Pearson correlation coefficient is -0.125 (p-value = 6.82e-05), and the Spearman correlation coefficient is -0.126 (p-value = 6.33e-05). While the low p-values indicate the results are statistically significant, the correlation coefficients are close to zero, signifying a very weak association. This suggests no meaningful evidence of inclusivity negatively impacting a movie's success.
+</p>
 
 <br />
 
-**SAR team:** You can be reassured, if your movie is good, prioritizing inclusivity will not harm its success. However, there is still significant progress to be made before inclusivity becomes the norm in movie industry. While we would expect that inclusivity positively contributes to a movie’s success, we are far from it. Achieving this will require continued efforts, such as better representation of women in storytelling and active advocacy within the industry.
+</strong>SAR team:</strong> You can be reassured, if your movie is good, prioritizing inclusivity will not harm its success. However, there is still significant progress to be made before inclusivity becomes the norm in movie industry. While we would expect that inclusivity positively contributes to a movie’s success, we are far from it. Achieving this will require continued efforts, such as better representation of women in storytelling and active advocacy within the industry.
 
 <br />
 <br />
 
 # The Success Metric
 
-**Producer:** Okay, this is nice. I guess we will succeed in making an inclusive movie. However, I am concerned that it might affect the success of my movie…
+</strong>Producer:</strong> Okay, this is nice. I guess we will succeed in making an inclusive movie. However, I am concerned that it might affect the success of my movie…
 <br />
 <br />
-Defining what constitutes the success of a movie is not an easy task. Naturally, we want the movie to generate as much revenue as possible, but we also consider it equally important for the movie to be appreciated by the audience. To capture this balance, we introduce a success metric:
+<p class="indent"> Defining what constitutes the success of a movie is not an easy task. Naturally, we want the movie to generate as much revenue as possible, but we also consider it equally important for the movie to be appreciated by the audience. To capture this balance, we introduce a success metric:
+</p>
 
 $$
-\text{Net Box Office Revenue} = \text{Box Office Revenue} - \text{Initial Budget}
+\textbf{Net Box Office Revenue} = \text{Box Office Revenue} - \text{Initial Budget}
 $$
 
 $$
-\text{Success Metric} = a_1 \cdot \text{rank}(\text{Net Box Office Revenue}) + a_2 \cdot \text{rank}(\text{Rating})
+\textbf{Success Metric} = a_1 \cdot \text{rank}(\text{Net Box Office Revenue}) + a_2 \cdot \text{rank}(\text{Rating})
 $$
 
-Here, $$a_1$$ and $$a_2$$ are constants. In this case, we set $$a_1= a_2 = 0.5$$, as we consider both rating and revenue equally important. However, if someone wanted to prioritize either revenue or rating, the constants could be adjusted accordingly.
+
+<p class="indent"> Here, \( a_{1} \) and \( a_{2} \) are constants. In this case, we set \( a_{1} = a_{2} = 0.5 \), as we consider both rating and revenue equally important. However, if someone wanted to prioritize either revenue or rating, the constants could be adjusted accordingly.
+</p>
 <br />
 <br />
-Using the rank of revenue and rating ensures equal weighting between the two metrics, even if the revenue values are significantly large. For example, a movie with the highest revenue in the dataset will have $$\text{rank}(\text{Net Box Office Revenue}) = 1$$. However, if it is the lowest-rated movie, regardless of how large its revenue is $$\text{rank}(\text{Rating}) = 0$$ In this case, the success metric would be of 0.5. This ranking approach prevents the success metric from being disproportionately influenced by very high revenue figures, ensuring that both factors contribute fairly to the final score.
+<p class="indent"> Using the rank of revenue and rating ensures equal weighting between the two metrics, even if the revenue values are significantly large. For example, a movie with the highest revenue in the dataset will have rank(Net Box Office Revenue) = 1. However, if it is the lowest-rated movie, regardless of how large its revenue is rank(Rating) = 0 In this case, the success metric would be of 0.5. This ranking approach prevents the success metric from being disproportionately influenced by very high revenue figures, ensuring that both factors contribute fairly to the final score.
+</p>
 <br />
 <br />
 
