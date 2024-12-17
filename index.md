@@ -170,13 +170,12 @@ $$
 
 <br>
 
-1. </strong>Normalized Bechdel Score</strong>: The traditional Bechdel score scaled to ensure compatibility with other metrics.<br>
-
-2. </strong>Promotion of Actress</strong>: The proportion of actresses in the movie compared to actors.<br>
-
-3. </strong>Women’s Share of the Script</strong>: The percentage of the script allocated to female characters.<br><br>
-
-This approach ensures a more comprehensive and meaningful evaluation of inclusivity in movies, moving beyond the simplicity of the Bechdel Test.
+<p>
+    <strong>1. Normalized Bechdel Score:</strong> The traditional Bechdel score scaled to ensure compatibility with other metrics.<br>
+    <strong>2. Promotion of Actress:</strong> The proportion of actresses in the movie compared to actors.<br>
+    <strong>3. Women’s Share of the Script:</strong> The percentage of the script allocated to female characters.<br><br>
+    This approach ensures a more comprehensive and meaningful evaluation of inclusivity in movies, moving beyond the simplicity of the Bechdel Test.
+</p>
 
 <br />
 
