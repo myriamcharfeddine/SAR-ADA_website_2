@@ -5,9 +5,10 @@ title: "SARteam"
 
 # Introduction
 
-For over a century, cinema has played a pivotal role in shaping societal perceptions and cultural narratives.
+<p class="indent"> For over a century, cinema has played a pivotal role in shaping societal perceptions and cultural narratives.
 Yet, while the industry has seen technological and creative advancements, the representation of women has remained trapped in
 archaic stereotypes. Actresses have often been assigned to secondary roles, limited by narrow character tropes and overshadowed by their male counterparts.
+</p>
 <br>
 Through this analysis, we’re here to empower you to create a blockbuster that doesn’t just shine at the box office but also sets a new standard for equality in cinema. We'll guide you through the key ingredients for crafting a film that is as inclusive as it is successful.
 Because while inclusivity is the mission, success is the name of the game and our recommendations are designed to deliver both. So, let’s pull back the curtain on the current industry landscape and explore the challenges that stand between you and a truly groundbreaking, inclusive film.
@@ -133,9 +134,9 @@ To add: Bechdel + Genre
 <br />
 <br />
 
-<p><strong>Film Director:</strong> As you can see in the visualizations above, the results reveal significant trends in gender representation across different regions and time periods. For example, North America shows some improvement over the decades, but there’s still work to do. Europe and Asia have their own unique patterns as well.</p>
+<p> <strong>Film Director:</strong> As you can see in the visualizations above, the results reveal significant trends in gender representation across different regions and time periods. For example, North America shows some improvement over the decades, but there’s still work to do. Europe and Asia have their own unique patterns as well.</p>
 
-<p>While passing the Bechdel Test is a good start, we need to think about how meaningful the roles for women really are. Let’s discuss how we can go beyond this and create truly inclusive films.</p>
+<p> While passing the Bechdel Test is a good start, we need to think about how meaningful the roles for women really are. Let’s discuss how we can go beyond this and create truly inclusive films.</p>
 
 
 
@@ -144,10 +145,10 @@ To add: Bechdel + Genre
 <br />
 <br />
 
-**SAR team:** Okay, this Bechdel Test is very interesting. However, if you create a movie with the intent of achieving a Bechdel score of 3, this is very easy. You just need to hire two women and write a two-line dialogue about something unrelated to men. Therefore, we aim to create a more meaningful metric to evaluate whether a movie is truly inclusive.<br><br>
+<strong>SAR team:</strong> Okay, this Bechdel Test is very interesting. However, if you create a movie with the intent of achieving a Bechdel score of 3, this is very easy. You just need to hire two women and write a two-line dialogue about something unrelated to men. Therefore, we aim to create a more meaningful metric to evaluate whether a movie is truly inclusive.<br><br>
 
 The Bechdel score provides a solid foundation for developing an inclusivity metric. To build on this, we also evaluate the proportion of actresses in the movie to assess the level of female representation. However, this alone is insufficient. A movie may feature many women in minor or background roles, or conversely, a single actress who takes on the lead role. Therefore, we also consider the share of the script attributed to actresses to capture their meaningful presence in the film.<br>
-Indeed, looking at the distribution of the script in the figure below provided by [The Pudding](https://pudding.cool/2017/03/film-dialogue/). Only 24% of movies show an equal dialogue distribution between women and men!
+Indeed, looking at the distribution of the script in the figure below provided by [The Pudding](https://pudding.cool/2017/03/film-dialogue/). Only 24% of movies show an equal dialogue or more female distribution of the script!
 
 <br>
 <div style="width: 100%; height: 100vh; overflow: hidden;">

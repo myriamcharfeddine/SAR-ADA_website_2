@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+.indent {
+  text-indent: 2em;
+}
 
 /* Hero Banner Section */
 .hero-banner {
