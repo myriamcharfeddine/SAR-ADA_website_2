@@ -76,10 +76,68 @@ Understanding the most common character tropes for women and men in cinema provi
   </div>
 </div>
 
+
 # The Bechdel Score
+
+### The Bechdel Test
+
+<div style="margin: 20px 0; text-align: justify;">
+  <p><strong>Film Director:</strong> I’ve heard about this interesting metric called the Bechdel Test. It’s a great starting point to evaluate how inclusive a movie is when it comes to gender representation. Let me walk you through it:</p>
+  
+  <p>The Bechdel Test is based on three simple criteria:</p>
+  <ol style="margin: 15px auto; padding-left: 20px; max-width: 1200px; list-style-position: outside; text-align: justify;">
+    <li>Does the film have at least two named women?</li>
+    <li>Do these women talk to each other?</li>
+    <li>Do they discuss something other than a man?</li>
+  </ol>
+  
+  <p>It might sound simple, but you’d be surprised how many films fail to meet these basic requirements. While the test doesn’t capture everything about inclusivity, it’s a valuable tool for spotting patterns in storytelling. Let’s take a look at the results from various regions and years to see how movies perform.</p>
+</div>
+
+### Visualizing the Bechdel Test Results
+
+Along the years: Avg bechdel test result
+<div style="display: flex; justify-content: center; align-items: center; margin: 40px auto; max-width: 1000px;">
+  <div style="flex: 1; max-width: 100%; text-align: center;">
+    <iframe src="assets/avg_bechdel_score_by_year.html" width="100%" height="500px" style="border: none;"></iframe>
+  </div>
+</div>
+
+Around the world:
+
+<div style="display: flex; justify-content: center; align-items: center; margin: 40px auto; max-width: 1000px;">
+  <div style="flex: 1; max-width: 100%; text-align: center;">
+    <iframe src="assets/average_bechdel_score_map.html" width="100%" height="500px" style="border: none;"></iframe>
+  </div>
+</div>
+
+Be careful! Over representation of the US in the Bechdel score databse:
+
+<div style="display: flex; justify-content: center; align-items: center; margin: 40px auto; max-width: 1000px;">
+  <div style="flex: 1; max-width: 100%; text-align: center;">
+    <iframe src="assets/bechdel_countries_piechart.html" width="100%" height="500px" style="border: none;"></iframe>
+  </div>
+</div>
+
+Interesting, and how does the bechdel score relate to the cast of a movie?
+
+<div style="display: flex; justify-content: center; align-items: center; margin: 40px auto; max-width: 1000px;">
+  <div style="flex: 1; max-width: 100%; text-align: center;">
+    <iframe src="assets/bechdel_score_vs_female_ratio.html" width="100%" height="500px" style="border: none;"></iframe>
+  </div>
+</div>
+
+
+To add: Bechdel + Genre
 
 <br />
 <br />
+
+<p><strong>Film Director:</strong> As you can see in the visualizations above, the results reveal significant trends in gender representation across different regions and time periods. For example, North America shows some improvement over the decades, but there’s still work to do. Europe and Asia have their own unique patterns as well.</p>
+
+<p>While passing the Bechdel Test is a good start, we need to think about how meaningful the roles for women really are. Let’s discuss how we can go beyond this and create truly inclusive films.</p>
+
+
 
 # The Inclusivity Score
 
