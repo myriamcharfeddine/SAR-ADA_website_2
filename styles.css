@@ -1,0 +1,528 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.indent {
+  text-indent: 2em;
+}
+
+
+/* Hero Banner Section */
+.hero-banner {
+  font-family: "Didot", serif;
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust the height as needed */
+  background-image: url('../img/HImage.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white; /* Ensure text is visible */
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center the hero-content vertically */
+  margin-top: -70px; /* Negative margin to offset the navbar height */
+  z-index: 1; /* Ensure it overlaps correctly */
+}
+
+/* Hero Content Section (Title and Description) */
+.hero-content {
+  z-index: 2; /* Ensure it stays above the background */
+}
+
+/* Hero Subtext Section (Team and Names) */
+.hero-subtext {
+  position: absolute; /* Position it relative to the hero-banner */
+  bottom: 20px; /* Move it 20px from the bottom of the banner */
+  text-align: center;
+  font-size: 0.9em; /* Adjust the font size for smaller text */
+  color: white; /* Ensure text is visible on the background */
+}
+
+.hero-subtext p {
+  margin: 5px 0; /* Add slight spacing between the lines */
+}
+
+
+
+/* Title */
+.hero-content h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: white !important;
+}
+
+/* Subitle = description */
+.hero-content p {
+  font-size: 1.8em; /* Adjust description font size */
+  margin-top: 10px;
+  color: white; /* Ensure subtitle is white */
+}
+
+/* Names and Team (Hero Subtext) */
+.hero-subtext p {
+  font-size: 1em; /* Smaller font size than description */
+  margin: 5px 0; /* Add slight spacing between lines */
+  color: white; /* Ensure text is white */
+}
+
+/* Navbar Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center; /* Vertically align the logo */
+  margin-right: 10px; /* Space between the logo and title */
+}
+
+.navbar-logo img.logo-img {
+  height: 40px; /* Adjust logo height */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* General Styles */
+body {
+  background-color: #fff;
+  padding-top: 70px; /* Adjust this to match navbar height */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  color: #595959;
+  font-weight: 400;
+}
+
+.wrapper {
+  width: 70%;
+  max-width: 1080px;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(17, 16, 16, 0.962);
+  z-index: 9999;
+}
+
+.navbar-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.navbar-title {
+  flex: 1;
+  text-align: center;
+  font-family: "Didot", serif;
+}
+
+.navbar-title a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  display: block;
+}
+
+.navbar-toggle span {
+  font-size: 30px;
+  color: white;
+}
+
+/* Table of Contents Menu (Sidebar) */
+.toc-menu {
+  position: fixed;
+  top: 70px; /* Adjust this to match navbar height */
+  right: -300px; /* Start off-screen */
+  width: 300px;
+  height: calc(100% - 70px); /* Adjust height accordingly */
+  background-color: #f8f8f8;
+  box-shadow: -2px 0 5px rgba(100, 100, 100, 0.1);
+  padding: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 9998;
+  overflow-y: auto;
+}
+
+/* When the menu is visible */
+.toc-menu.visible {
+  right: 0; /* Bring it into view */
+}
+
+/* =table of content */
+.toc-menu h2 {
+  font-family: "Palatino", serif;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  align-items: center !important;
+}
+
+/* TOC Styles */
+.toc-menu ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.toc-menu li {
+  margin-bottom: 5px;
+}
+.toc-menu a {
+  text-decoration: none;
+  font-family: "Palatino", serif;
+  color: black;       
+}
+
+.toc-level-1 a {
+  font-family: "Palatino", serif;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.toc-level-2 a {
+  font-family: "Palatino", serif;
+  font-size: 1.1em;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.toc-level-3 a {
+  font-family: "Palatino", serif;
+  font-size: 1em;
+  margin-left: 30px;
+  font-weight: bold;
+}
+
+/* Interaction at the begining*/
+/* General chat container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto; /* Adjust to auto to prevent unnecessary height */
+  padding: 20px;
+  background-color: transparent;
+  box-sizing: border-box;
+  overflow-y: auto;
+  margin: 0; /* Ensure no margin after the chat container */
+}
+
+
+/* Remove extra space below the chat container */
+.chat-container + * {
+  margin-top: 0; /* Remove margin above the next element */
+}
+
+/* Chat Message */
+.chat-message {
+  display: flex;
+  margin-bottom: 20px; /* Space between messages */
+  width: 100%; /* Ensure the messages take up the full width */
+  align-items: flex-start; /* Align items at the top */
+  padding: 0; /* Ensure no padding between elements */
+}
+
+/* Marine's message */
+.chat-message.marine {
+  justify-content: flex-start; /* Marine's message on the left */
+}
+
+/* Marco's message */
+.chat-message.marco {
+  justify-content: flex-end; /* Marco's message on the right */
+}
+
+/* Adjust the order for Marco's message */
+.chat-message.marco .contact-picture {
+  order: 1; /* Put the picture after the message bubble */
+}
+
+.chat-message.marco .chat-bubble {
+  order: -1; /* Ensure the bubble appears first */
+}
+
+/* Contact Picture */
+.contact-picture {
+  margin: 0 10px;
+}
+
+.contact-picture img {
+  width: 100px; /* Adjusted size */
+  height: 100px; /* Adjusted size */
+  border-radius: 60%; /* Make it round */
+  object-fit: cover; /* Ensure no distortion */
+}
+
+/* Chat Bubble */
+.chat-bubble {
+  max-width: 80%; /* Make bubble width more reasonable */
+  padding: 15px;
+  border-radius: 15px;
+  background-color: transparent;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  font-size: 16px;
+  line-height: 1.4;
+  color: black; /* Set default text color */
+}
+
+/* Marine's Bubble */
+.chat-message.marine .chat-bubble {
+  background-color: #bdc3c4; /* Marine's color */
+  color: black; /* Set Marine's text color to black */
+}
+
+/* Marco's Bubble */
+.chat-message.marco .chat-bubble {
+  background-color: #449bd9; /* Marco's color */
+  color: white; /* Marco's text color */
+}
+
+/* Typing Animation for Marco */
+.typing-animation {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 20px;
+}
+
+.typing-animation span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #a4b3b3; /* Typing dot color */
+  border-radius: 50%;
+  animation: typing 1.5s infinite ease-in-out;
+}
+
+.typing-animation span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing-animation span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.typing-animation span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes typing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Remove default margin after the chat container */
+.chat-container + * {
+  margin-top: 0; /* Remove margin above the next element */
+}
+
+/* Margin and padding control for the elements in the chat */
+.chat-message {
+  margin: 0 0 10px 0; /* Small space between messages */
+  padding: 0; /* Ensure no padding between elements */
+}
+
+.chat-message.marine .chat-bubble,
+.chat-message.marco .chat-bubble {
+  margin: 0; /* Remove margin from inside chat bubbles */
+  padding: 15px; /* Standard padding inside bubbles */
+}
+
+/* Clear any default margins from <p>, <h1>, etc., after chat container */
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0; /* Remove top margin */
+  padding: 0; /* Remove padding if necessary */
+}
+
+/* Control space around the chat container and text block */
+.chat-container + p {
+  margin-top: 0; /* No extra margin between chat and next paragraph */
+}
+
+
+/* Heading Styles */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h5 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h6 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  color: #333;
+}
+
+/* Offset for Anchors to Account for Fixed Navbar */
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+  display: block;
+  content: " ";
+  margin-top: -70px; /* Negative margin equal to navbar height */
+  height: 70px; /* Height equal to navbar height */
+  visibility: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: #f2f2f2; /* Light grey background */
+  color: #595959; /* Darker grey for text */
+  text-align: center; /* Center the text */
+  padding: 15px 0; /* Add vertical padding */
+  font-size: 0.9em; /* Slightly smaller font size */
+  position: relative; /* Keep it at the bottom */
+  width: 100%;
+  border-top: 1px solid #e0e0e0; /* Optional: subtle top border for separation */
+}
+
+
+/* Search Widget Styles */
+.search-widget {
+  background-color: #e57373; /* Slightly softer red */
+  border-radius: 12px; /* Rounder corners for a modern look */
+  padding: 20px; /* Add space inside the container */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+
+.search-widget label {
+  display: inline-block; /* Ensure label is inline with the input */
+  margin-bottom: 5px;    /* Reduce space below the label */
+  margin-right: 10px;    /* Add space between the label and input */
+  font-size: 18px;
+  font-weight: bold;
+  color: #5a1f1f; /* Darker red tone for better contrast */
+}
+
+#searchInput {
+  border: 2px solid #cc5555; /* Softer border */
+  border-radius: 8px;
+  box-shadow: none; /* Remove extra shadow */
+  padding: 12px;
+  font-size: 16px;
+}
+
+#searchInput:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #a94442; /* Slightly darker border on focus */
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.2); /* Subtle glow */
+}
+
+#searchButton {
+  background-color: #97c3f1;
+  color: #6f9a89;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+  background-color: #0056b3;
+}
+
+#resultContainer {
+  background-color: #fce4e4; /* Light pink to complement the red widget */
+  padding: 15px; /* Add padding for spacing */
+  border-radius: 8px; /* Match the widget's rounded corners */
+  margin-top: 10px; /* Add spacing above the result section */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Add depth */
+  border: 1px solid #cc5555; /* Subtle border to match widget */
+}
+
+#resultContainer p {
+  margin: 5px 0; /* Space out the lines for readability */
+  font-size: 16px;
+}
+
+#resultContainer strong {
+  color: #121111; /* Neutral color for readability */
+}
+
+#searchInput:hover {
+  border-color: #a94442; /* Slightly darker red */
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.2); /* Glow effect */
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  .search-widget {
+    padding: 15px;
+  }
+
+  #searchInput {
+    font-size: 14px;
+  }
+
+  #searchButton {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}
