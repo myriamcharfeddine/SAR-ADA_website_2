@@ -34,9 +34,9 @@ function simulateTyping() {
     // Show the rest of the content (everything that comes after Marco's response)
     setTimeout(() => {
       document.getElementById("additional-content").style.display = "block"; // Show additional content
-    }, 1000); // Delay for showing additional content (adjust as needed)
+    }, 2000); // Delay for showing additional content (adjust as needed)
     
-  }, 3000); // 3 seconds delay for typing effect
+  }, 5000); // 3 seconds delay for typing effect
 }
 
 
