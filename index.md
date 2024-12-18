@@ -3,17 +3,44 @@ layout: default
 title: "SARteam"
 ---
 
-# Introduction
+<div class="chat-container">
+  <!-- Marine's message -->
+  <div class="chat-message marine">
+    <div class="contact-picture">
+      <img src="assets/img/productrice.png" alt="Marine">
+    </div>
+    <div class="chat-bubble">
+      For over a century, cinema has shaped how we see the world, crafting our stories and reflecting our cultures. Yet, the way women are written remains trapped in the past. I’ve been a producer in this industry for over a decade and I remember standing backstage at the Oscars ceremony when a director remarked, “There just aren’t enough compelling stories with women leads.” How can we say that when we've barely allowed women to be anything but the mother, the wife, the lover ? 
+      I’m done watching brilliant actresses confined to clichés. I want to create movies where women drive the story, stories where they’re not just present but pivotal. It’s time to break free from the old narrative!
+    </div>
+  </div>
+  <!-- Marco's typing effect (appears first) -->
+  <div id="typing-indicator" class="chat-message marco">
+    <div class="contact-picture">
+      <img src="assets/img/SAR.png" alt="Marco">
+    </div>
+    <div class="chat-bubble">
+      <div class="typing-animation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- Marco's response (appears after typing) -->
+  <div id="marco-response" class="chat-message marco" style="display: none;">
+    <div class="contact-picture">
+      <img src="assets/img/SAR.png" alt="Marco">
+    </div>
+    <div class="chat-bubble">
+      We’re here to help you turn your vision into reality! Through our analysis, we will help you create a movie that not only shines at the box office but sets a new benchmark for equality in cinema. We'll guide you through the key ingredients for crafting a movie that is as inclusive as it is successful. Because while inclusivity is the mission, success is the name of the game and our recommendations are designed to deliver both. So, let’s pull back the curtain on the current industry and explore the challenges that stand between you and a truly groundbreaking, inclusive movie. Together, let’s rewrite the narrative...
+    </div>
+  </div>
+    
+<!-- Include your JavaScript file at the end of the body section -->
+<script src="assets/js/message.js"></script>
 
-<p class="indent"> For over a century, cinema has played a pivotal role in shaping societal perceptions and cultural narratives.
-Yet, while the industry has seen technological and creative advancements, the representation of women has remained trapped in
-archaic stereotypes. Actresses have often been assigned to secondary roles, limited by narrow character tropes and overshadowed by their male counterparts.
-</p>
-<br>
-<p class="indent">
-Through this analysis, we’re here to empower you to create a blockbuster that doesn’t just shine at the box office but also sets a new standard for equality in cinema. We'll guide you through the key ingredients for crafting a film that is as inclusive as it is successful.
-Because while inclusivity is the mission, success is the name of the game and our recommendations are designed to deliver both. So, let’s pull back the curtain on the current industry landscape and explore the challenges that stand between you and a truly groundbreaking, inclusive film.
-</p>
+<div id="additional-content" style="display: none;">
 
 # Behind the curtain: The current state of women in cinema
 

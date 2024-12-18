@@ -9,6 +9,7 @@
   text-indent: 2em;
 }
 
+
 /* Hero Banner Section */
 .hero-banner {
   font-family: "Didot", serif;
@@ -203,6 +204,163 @@ body {
   margin-left: 30px;
   font-weight: bold;
 }
+
+/* Interaction at the begining*/
+/* General chat container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto; /* Adjust to auto to prevent unnecessary height */
+  padding: 20px;
+  background-color: transparent;
+  box-sizing: border-box;
+  overflow-y: auto;
+  margin: 0; /* Ensure no margin after the chat container */
+}
+
+
+/* Remove extra space below the chat container */
+.chat-container + * {
+  margin-top: 0; /* Remove margin above the next element */
+}
+
+/* Chat Message */
+.chat-message {
+  display: flex;
+  margin-bottom: 20px; /* Space between messages */
+  width: 100%; /* Ensure the messages take up the full width */
+  align-items: flex-start; /* Align items at the top */
+  padding: 0; /* Ensure no padding between elements */
+}
+
+/* Marine's message */
+.chat-message.marine {
+  justify-content: flex-start; /* Marine's message on the left */
+}
+
+/* Marco's message */
+.chat-message.marco {
+  justify-content: flex-end; /* Marco's message on the right */
+}
+
+/* Adjust the order for Marco's message */
+.chat-message.marco .contact-picture {
+  order: 1; /* Put the picture after the message bubble */
+}
+
+.chat-message.marco .chat-bubble {
+  order: -1; /* Ensure the bubble appears first */
+}
+
+/* Contact Picture */
+.contact-picture {
+  margin: 0 10px;
+}
+
+.contact-picture img {
+  width: 100px; /* Adjusted size */
+  height: 100px; /* Adjusted size */
+  border-radius: 60%; /* Make it round */
+  object-fit: cover; /* Ensure no distortion */
+}
+
+/* Chat Bubble */
+.chat-bubble {
+  max-width: 80%; /* Make bubble width more reasonable */
+  padding: 15px;
+  border-radius: 15px;
+  background-color: transparent;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  font-size: 16px;
+  line-height: 1.4;
+  color: black; /* Set default text color */
+}
+
+/* Marine's Bubble */
+.chat-message.marine .chat-bubble {
+  background-color: #bdc3c4; /* Marine's color */
+  color: black; /* Set Marine's text color to black */
+}
+
+/* Marco's Bubble */
+.chat-message.marco .chat-bubble {
+  background-color: #449bd9; /* Marco's color */
+  color: white; /* Marco's text color */
+}
+
+/* Typing Animation for Marco */
+.typing-animation {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 20px;
+}
+
+.typing-animation span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background-color: #a4b3b3; /* Typing dot color */
+  border-radius: 50%;
+  animation: typing 1.5s infinite ease-in-out;
+}
+
+.typing-animation span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing-animation span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.typing-animation span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes typing {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Remove default margin after the chat container */
+.chat-container + * {
+  margin-top: 0; /* Remove margin above the next element */
+}
+
+/* Margin and padding control for the elements in the chat */
+.chat-message {
+  margin: 0 0 10px 0; /* Small space between messages */
+  padding: 0; /* Ensure no padding between elements */
+}
+
+.chat-message.marine .chat-bubble,
+.chat-message.marco .chat-bubble {
+  margin: 0; /* Remove margin from inside chat bubbles */
+  padding: 15px; /* Standard padding inside bubbles */
+}
+
+/* Clear any default margins from <p>, <h1>, etc., after chat container */
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0; /* Remove top margin */
+  padding: 0; /* Remove padding if necessary */
+}
+
+/* Control space around the chat container and text block */
+.chat-container + p {
+  margin-top: 0; /* No extra margin between chat and next paragraph */
+}
+
 
 /* Heading Styles */
 h1 {
