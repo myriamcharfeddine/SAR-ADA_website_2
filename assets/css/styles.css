@@ -468,28 +468,38 @@ h6::before {
 
 /* Search Widget Styles */
 .search-widget {
-  background-color: #e57373; /* Slightly softer red */
-  border-radius: 12px; /* Rounder corners for a modern look */
+  background-image: url('../img/ticket.jpg'); /* Set the background image */
+  background-size: cover;
+  background-position: center;
   padding: 20px; /* Add space inside the container */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  width: 1000px ;
+  height: 400px ;
 }
 
 
-.search-widget label {
-  display: inline-block; /* Ensure label is inline with the input */
+
+.label {
+  display: block; /* Ensure label is inline with the input */
   margin-bottom: 5px;    /* Reduce space below the label */
   margin-right: 10px;    /* Add space between the label and input */
+  margin-left: 110px;
+  margin-top: 10px;
   font-size: 18px;
   font-weight: bold;
-  color: #5a1f1f; /* Darker red tone for better contrast */
+  color: #ffffff; /* Darker red tone for better contrast */
 }
+
+
 
 #searchInput {
   border: 2px solid #cc5555; /* Softer border */
+  margin-left: 200px;
   border-radius: 8px;
   box-shadow: none; /* Remove extra shadow */
-  padding: 12px;
+  padding: 10px 20px;
   font-size: 16px;
+  margin-top: 30px;
 }
 
 #searchInput:focus {
@@ -517,9 +527,12 @@ h6::before {
   background-color: #fce4e4; /* Light pink to complement the red widget */
   padding: 15px; /* Add padding for spacing */
   border-radius: 8px; /* Match the widget's rounded corners */
-  margin-top: 10px; /* Add spacing above the result section */
+  margin-top: 50px; /* Add spacing above the result section */
+  margin-left: 110px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Add depth */
   border: 1px solid #cc5555; /* Subtle border to match widget */
+  width: 300px;
+  height: auto; /* Adjust the height as needed */
 }
 
 #resultContainer p {
