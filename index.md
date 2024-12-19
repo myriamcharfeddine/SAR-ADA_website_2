@@ -264,11 +264,11 @@ title: "SARteam"
   </p>
 
   $$
-  \textbf{Net Box Office Revenue} = \text{Box Office Revenue} - \text{Initial Budget}
+    \textbf{Net Box Office Revenue} = \text{Box Office Revenue} - \text{Initial Budget}
   $$
 
   $$
-  \textbf{Success Metric} = a_1 \cdot \text{rank}(\text{Net Box Office Revenue}) + a_2 \cdot \text{rank}(\text{Rating})
+    \textbf{Success Metric} = a_1 \cdot \text{rank}(\text{Net Box Office Revenue}) + a_2 \cdot \text{rank}(\text{Rating})
   $$
 
   <p class="indent"> Here, \( a_{1} \) and \( a_{2} \) are constants. In this case, we set \( a_{1} = a_{2} = 0.5 \), as we consider both rating and revenue equally important. However, if someone wanted to prioritize either revenue or rating, the constants could be adjusted accordingly.
@@ -283,9 +283,10 @@ title: "SARteam"
   <br />
   <br />
 
+
   <!-- Search Widget -->
   <div class="search-widget">
-    <label for="searchInput">Search your favourite movie:</label>
+    <div class="label">Search your favourite movie:</div>
     <input type="text" id="searchInput" placeholder="Type a movie title...">
     <div id="resultContainer">
       <!-- Results will be displayed here -->
